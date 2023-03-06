@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var SideMenu = function SideMenu(prop) {
   var goRoom = function goRoom() {
-    location.assign("../../../index.html");
+    location.assign("../../../room.html");
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.menu ? "sidemenu_cont unhide" : "sidemenu_cont closeup"

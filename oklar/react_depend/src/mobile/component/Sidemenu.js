@@ -3,7 +3,7 @@ import { ReactDOM } from "react-dom/client";
 
 export const SideMenu = (prop) => {
   const goRoom = () => {
-    location.assign("../../../index.html");
+    location.assign("../../../room.html");
   };
   return (
     <div
