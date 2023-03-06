@@ -18,7 +18,7 @@ export let Intro = (prop) => {
           Enjoy our top notch service during your holidays, buisness trips and
           couple time
         </h4>
-        <a href="../../../index.html">
+        <a href="../../../room.html">
           OUR ROOMS <span> &rarr; </span>
         </a>
       </div>
