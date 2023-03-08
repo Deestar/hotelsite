@@ -364,7 +364,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  width: fit-content;
+  width: 100%;
 }
 .service h2 {
   /* border: var(--border); */
@@ -383,13 +383,14 @@ body {
 }
 .s_list {
   /* border: var(--border3); */
-  max-width: fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 .s_list div {
   border-bottom: 2px solid rgb(129, 128, 128);
+  /* border: var(--border); */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -397,7 +398,7 @@ body {
   padding-bottom: 1px;
 }
 .s_list div h6 {
-  /* border: var(--border2); */
+  /* border: var(--border2);  */
   display: grid;
   height: fit-content;
   align-self: flex-end;
