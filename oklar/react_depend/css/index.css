@@ -9,6 +9,7 @@
   --border3: 3px solid rgb(0, 255, 136);
   --white: rgb(228, 228, 228);
   --orange: rgb(228, 159, 80);
+  --height: 100vh;
 }
 body {
   /* border: var(--border); */
@@ -19,7 +20,7 @@ body {
 /* Side Menu Style */
 .sidemenu_cont {
   /* border: var(--border); */
-  height: 100vh;
+  height: calc(100vh - var(--height));
   max-height: 100vh;
   /* overflow: hidden; */
   position: absolute;
@@ -117,7 +118,8 @@ body {
 }
 .mobile_cont {
   /* border: var(--border); */
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - var(--height));
   box-sizing: border-box;
   z-index: 999;
   display: grid;

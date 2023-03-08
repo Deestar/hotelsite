@@ -37,15 +37,30 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Mobile = function Mobile() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
-    menu = _useState2[0],
-    setMenu = _useState2[1];
+    phoneui = _useState2[0],
+    setPhoneUi = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var actualHeight = function actualHeight() {
+      return window.innerHeight - screen.availHeight;
+    };
+    window.onresize = function () {
+      return setPhoneUi(actualHeight);
+    };
+    setPhoneUi(actualHeight);
+  }, []);
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    menu = _useState4[0],
+    setMenu = _useState4[1];
   var menuClick = function menuClick() {
     return setMenu(function (prev) {
       return !prev;
     });
   };
+  // const uiheight = { "--height": `${phoneui}vh ` };
+  document.documentElement.style.setProperty("--height", "".concat(phoneui, "vh "));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "mobile_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Intro__WEBPACK_IMPORTED_MODULE_2__.Intro, {
