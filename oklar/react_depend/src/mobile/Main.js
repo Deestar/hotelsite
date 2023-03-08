@@ -7,19 +7,13 @@ import { Special } from "./component/special";
 import { Foot } from "./component/footer";
 import { SideMenu } from "./component/Sidemenu";
 import { useState } from "react";
+import { useRef } from "react";
 export let Mobile = () => {
-  const [phoneui, setPhoneUi] = useState(0);
-  useEffect(() => {
-    const actualHeight = () => window.innerHeight - screen.availHeight;
-    window.onresize = () => setPhoneUi(actualHeight);
-    setPhoneUi(actualHeight);
-  }, []);
+  const cont = useRef(null);
   const [menu, setMenu] = useState(false);
   const menuClick = () => setMenu((prev) => !prev);
-  // const uiheight = { "--height": `${phoneui}vh ` };
-  document.documentElement.style.setProperty("--height", `${phoneui}vh `);
   return (
-    <div className="mobile_cont">
+    <div className="mobile_cont" ref={cont}>
       <Intro handlemenu={menuClick} />
       <Discount />
       <Option />

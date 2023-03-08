@@ -9,7 +9,6 @@
   --border3: 3px solid rgb(0, 255, 136);
   --white: rgb(228, 228, 228);
   --orange: rgb(228, 159, 80);
-  --height: 100vh;
 }
 body {
   /* border: var(--border); */
@@ -20,15 +19,18 @@ body {
 /* Side Menu Style */
 .sidemenu_cont {
   /* border: var(--border); */
-  height: calc(100vh - var(--height));
+  height: 100vh;
   max-height: 100vh;
   /* overflow: hidden; */
-  position: absolute;
+  position: fixed;
   bottom: 0px;
+  top: 0px;
   background-color: rgba(46, 33, 33, 0.719);
   display: flex;
   column-gap: 20px;
   transition: width 0.5s ease-in;
+  z-index: 999;
+  overflow: hidden;
 }
 .sidemenu_cont .close {
   height: 40px;
@@ -39,10 +41,10 @@ body {
 .menu_cont {
   /* border: var(--border); */
   max-width: 80vw;
-  /* width: 0vw; */
   padding: 10px;
   padding-right: 0px;
   padding-left: 0px;
+  padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -74,6 +76,7 @@ body {
 .menu_cont .brand {
   padding-right: 20px;
   padding-left: 10px;
+  max-height: 40px;
 }
 
 .menu_cont ul {
@@ -118,16 +121,18 @@ body {
 }
 .mobile_cont {
   /* border: var(--border); */
-  position: relative;
-  height: calc(100vh - var(--height));
+  position: fixed;
+  top: 0px;
+  /* padding-top: 10px; */
+  height: 100vh;
+  max-height: 100vh;
   box-sizing: border-box;
-  z-index: 999;
+  z-index: 100;
   display: grid;
   grid-template-rows: 30vh 50vh 45vh 58vh 12vh;
   overflow-y: auto;
 }
 .intro_cont {
-  /* border: var(--border2); */
   display: flex;
   position: relative;
   max-width: 100vw;
@@ -349,7 +354,7 @@ body {
   font-size: 11px;
 }
 .option {
-  /* border: var(--border); */
+  border: var(--border2);
   margin-top: 6vh;
   background-color: rgb(48, 38, 38);
   background-image: url(./img/leaf2.png), url(./img/sunflower.png);
@@ -359,17 +364,16 @@ body {
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  overflow: hidden;
 }
 .service {
-  /* border: var(--border2); */
+  border: var(--border);
   display: flex;
   flex-direction: column;
   row-gap: 16px;
   width: 100%;
 }
 .service h2 {
-  /* border: var(--border); */
+  border: var(--border);
   color: var(--white);
   font-size: 17px;
   font-family: helvetica;
@@ -384,7 +388,7 @@ body {
   word-spacing: -1px;
 }
 .s_list {
-  /* border: var(--border3); */
+  border: var(--border3);
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -392,7 +396,7 @@ body {
 }
 .s_list div {
   border-bottom: 2px solid rgb(129, 128, 128);
-  /* border: var(--border); */
+  border: var(--border);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -400,14 +404,14 @@ body {
   padding-bottom: 1px;
 }
 .s_list div h6 {
-  /* border: var(--border2);  */
+  border: var(--border2);
   display: grid;
   height: fit-content;
   align-self: flex-end;
   font-size: 15px;
 }
 .s_list div h1 {
-  /* border: var(--border2); */
+  border: var(--border2);
   height: fit-content;
   font-size: 20px;
   font-weight: 800;
@@ -509,10 +513,9 @@ body {
 footer {
   /* border: var(--border); */
   display: flex;
-  height: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  padding: 20px 10px;
+  max-width: 100vw;
+  /* overflow: hidden; */
+  padding: 10px 10px;
   background-color: rgb(48, 38, 38);
   justify-content: space-between;
 }
@@ -522,6 +525,7 @@ footer {
   align-items: center;
   column-gap: 4px;
   color: white;
+  max-width: 40%;
 }
 .img_text h1 {
   /* border: var(--border3); */
@@ -544,6 +548,7 @@ footer {
   display: flex;
   column-gap: 8px;
   align-items: center;
+  /* border: var(--border); */
 }
 .num h6 {
   font-size: 14px;
@@ -552,6 +557,8 @@ footer {
 .num div {
   width: 24px;
   height: 23px;
+  max-width: 26px;
+  max-height: 26px;
   transform: rotate(180deg);
   background-image: url(./img/phone.png);
   background-size: cover;

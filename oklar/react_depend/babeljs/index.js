@@ -36,33 +36,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Mobile = function Mobile() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var cont = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
-    phoneui = _useState2[0],
-    setPhoneUi = _useState2[1];
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var actualHeight = function actualHeight() {
-      return window.innerHeight - screen.availHeight;
-    };
-    window.onresize = function () {
-      return setPhoneUi(actualHeight);
-    };
-    setPhoneUi(actualHeight);
-  }, []);
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    menu = _useState4[0],
-    setMenu = _useState4[1];
+    menu = _useState2[0],
+    setMenu = _useState2[1];
   var menuClick = function menuClick() {
     return setMenu(function (prev) {
       return !prev;
     });
   };
-  // const uiheight = { "--height": `${phoneui}vh ` };
-  document.documentElement.style.setProperty("--height", "".concat(phoneui, "vh "));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "mobile_cont"
+    className: "mobile_cont",
+    ref: cont
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Intro__WEBPACK_IMPORTED_MODULE_2__.Intro, {
     handlemenu: menuClick
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_discount__WEBPACK_IMPORTED_MODULE_3__.Discount, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_option__WEBPACK_IMPORTED_MODULE_4__.Option, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_footer__WEBPACK_IMPORTED_MODULE_6__.Foot, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__.SideMenu, {
