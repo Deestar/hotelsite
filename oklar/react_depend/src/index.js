@@ -42,8 +42,15 @@ const App = () => {
   });
 
   const isMobile = useMediaQuery({ maxWidth: 500 });
+  const isTablet = useMediaQuery({ maxWidth: 768 });
   {
-    return isMobile ? <Mobile /> : <div className="desktop">{each}</div>;
+    return isMobile ? (
+      <Mobile />
+    ) : isTablet ? (
+      <Tablet />
+    ) : (
+      <div className="tablet">{each}</div>
+    );
   }
 };
 
