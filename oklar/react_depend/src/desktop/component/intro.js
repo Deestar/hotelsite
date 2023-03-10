@@ -1,11 +1,17 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
 import { Nav } from "./Navbar";
+import { useMediaQuery } from "react-responsive";
 export const Intro = () => {
+  const isMobile = useMediaQuery({ minWidth: 1180 });
   return (
     <div className="desk_intro_cont">
       <Nav
-        brand={"../../../react_depend/css/img/oklarpng2.png"}
+        brand={
+          isMobile
+            ? "../../../react_depend/css/img/oklarpng.png"
+            : "../../../react_depend/css/img/oklarpng2.png"
+        }
         list={
           <>
             <li>HOME</li>
@@ -18,9 +24,10 @@ export const Intro = () => {
       />
       <div className="desk_intro">
         <img src="../../../react_depend/css/img/room3.jpg" />
+        <h1>STAY WITH COMFORT</h1>
         <section>
           <div className="i r">
-            <h3>NIGERIA.</h3>
+            <h3>NIGERIAN.</h3>
             <h3>ROYALTY.</h3>
             <h3>COMFORT.</h3>
           </div>
@@ -35,10 +42,10 @@ export const Intro = () => {
             </a>
           </div>
           <div className="i s">
-            <h3>ROOM SERVICE</h3>
-            <h3>ELECTRICITY</h3>
-            <h3>AFRICAN AND INT'L DISH</h3>
-            <h3>CLOSED AND OPEN BAR</h3>
+            <li>ROOM SERVICE</li>
+            <li>ELECTRICITY</li>
+            <li>AFRICAN & INT'L DISH</li>
+            <li>CLOSED & OPEN BAR</li>
           </div>
         </section>
       </div>

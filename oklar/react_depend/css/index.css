@@ -595,8 +595,9 @@ footer {
   height: var(--height);
   display: grid;
   overflow: scroll;
-  grid-template-rows: 90vh;
+  grid-template-rows: 90vh 60vh;
   width: 100vw;
+  overflow-y: auto;
   max-width: 100vw;
 }
 .desk_intro_cont {
@@ -606,6 +607,7 @@ footer {
   grid-template-rows: 12% 78%;
   row-gap: 7vh;
   padding: 10px var(--l);
+
   background-color: var(--b);
   /* height: fit-content; */
 }
@@ -662,6 +664,7 @@ footer {
   grid-template-rows: 42vh 1fr;
   row-gap: 5px;
   width: 100%;
+  position: relative;
   max-width: 1200px;
   justify-self: center;
   /* max-height: fit-content; */
@@ -704,6 +707,10 @@ footer {
 }
 .desk_intro section .b {
   background-color: rgb(202, 172, 177);
+  background-image: url(./img/hh.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 110% center;
   display: flex;
   position: relative;
   height: calc(100% + 5.5vh);
@@ -736,6 +743,22 @@ footer {
   row-gap: 10px;
   justify-content: center;
   color: var(--white);
+}
+.desk_intro section .s li {
+  list-style: circle;
+  font-weight: 600;
+}
+.desk_intro h1 {
+  position: absolute;
+  top: -28px;
+  color: var(--white);
+  letter-spacing: 2px;
+  font-size: 50px;
+  justify-self: center;
+  font-family: var(--h);
+}
+.desk_service {
+  border: var(--border);
 }
 /* ANIMATIONS........................ */
 @keyframes openup {
@@ -1060,5 +1083,10 @@ footer {
 @media (max-width: 690px) {
   .desk_intro_cont {
     padding: 10px 20px;
+  }
+}
+@media (max-width: 595px) {
+  .desk_intro_cont {
+    padding: 5px 20px;
   }
 }
