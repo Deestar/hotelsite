@@ -758,7 +758,57 @@ footer {
   font-family: var(--h);
 }
 .desk_service {
-  border: var(--border);
+  /* border: var(--border); */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0px var(--l);
+  column-gap: 30px;
+}
+
+.desk_service img {
+  max-width: 50%;
+  /* border: var(--border); */
+  height: 80%;
+}
+.desk_service section {
+  /* border: var(--border2); */
+  height: 80%;
+  font-family: var(--h);
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
+  row-gap: 15px;
+}
+.desk_service section h2 {
+  font-size: clamp(30px, 3.6vw, 53px);
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -1px;
+}
+.desk_service section h2 .sm {
+  color: orange;
+  font-size: 17px;
+}
+.desk_service section h3 {
+  padding-left: 20px;
+}
+.desk_service section .btns {
+  /* border: var(--border3); */
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}
+.desk_service section .btns button {
+  border: none;
+  background-color: white;
+  box-shadow: 0px 2px 1px 0px rgb(88, 85, 85);
+  height: fit-content;
+  font-size: clamp(14px, 2vw, 19px);
+  padding: 7px 3px;
+  color: var(--orange);
 }
 /* ANIMATIONS........................ */
 @keyframes openup {
@@ -1084,9 +1134,64 @@ footer {
   .desk_intro_cont {
     padding: 10px 20px;
   }
+  .desk_intro h1 {
+    position: absolute;
+    top: -28px;
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 40px;
+    justify-self: center;
+    font-family: var(--h);
+  }
+  .desk_service {
+    align-items: center;
+    display: flex;
+    padding: 0px 5px;
+    height: 90%;
+    column-gap: 30px;
+  }
+  .desk_service img {
+    width: 55%;
+    height: 90%;
+  }
+  .desk_service section {
+    max-width: 45%;
+    height: 90%;
+  }
+}
+@media (max-width: 750px) {
+  .desk_service {
+    padding: 0px 9px;
+    height: 90%;
+    column-gap: 30px;
+  }
+  .desk_service img {
+    width: 55%;
+    height: 90%;
+  }
+  .desk_service section {
+    max-width: 45%;
+    height: 90%;
+  }
 }
 @media (max-width: 595px) {
   .desk_intro_cont {
     padding: 5px 20px;
+  }
+}
+@media (min-width: 1550px) {
+  .desk_intro_cont {
+    background-image: url(./img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png);
+    background-repeat: no-repeat;
+    background-position: 160% 0px;
+    /* background-size: 20%; */
+  }
+}
+@media (min-width: 1250px) {
+  .desk_service {
+    background-image: url(./img/sun1.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 15%;
   }
 }
