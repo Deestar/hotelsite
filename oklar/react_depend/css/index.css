@@ -14,7 +14,7 @@
   --deskbig: clamp(56px, 9vw, 70px);
   --h: helvetica;
   --b: rgba(31, 19, 19, 0.938);
-  --l: 30px;
+  --l: 50px;
 }
 html {
   height: var(--height);
@@ -591,21 +591,23 @@ footer {
 
 /* DESKTOP STYLE START HERE */
 .desktop_cont {
-  border: var(--border);
+  /* border: var(--border); */
   height: var(--height);
   display: grid;
   overflow: scroll;
-  grid-template-rows: 100vh;
+  grid-template-rows: 90vh;
   width: 100vw;
   max-width: 100vw;
 }
 .desk_intro_cont {
-  border: var(--border3);
+  /* border: var(--border3); */
   min-width: 100%;
   display: grid;
-  grid-template-rows: 13% 1fr;
+  grid-template-rows: 12% 78%;
+  row-gap: 7vh;
   padding: 10px var(--l);
   background-color: var(--b);
+  /* height: fit-content; */
 }
 .desk_nav {
   /* border: var(--border2); */
@@ -615,7 +617,7 @@ footer {
   grid-template-columns: 40% 60%;
   column-gap: 10px;
   align-items: center;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(221, 218, 218, 0.199);
 }
 .desk_nav img {
@@ -647,7 +649,6 @@ footer {
   content: "";
   position: absolute;
   width: 10px;
-
   height: 100%;
   margin-left: calc(50% - 10px);
   border-bottom: 2px solid rgb(197, 195, 195);
@@ -656,18 +657,82 @@ footer {
   margin-top: 3px;
 }
 .desk_intro {
-  border: var(--border);
+  /* border: var(--border); */
   display: grid;
-  grid-template-rows: 55vh 1fr;
-  row-gap: 10px;
+  grid-template-rows: 35vh 1fr;
+  /* row-gap: 10px; */
+  max-width: 1200px;
+  justify-self: center;
+  max-height: fit-content;
 }
 .desk_intro img {
-  border: var(--border2);
+  /* border: var(--border2); */
   width: 100%;
   height: 100%;
 }
 .desk_intro section {
-  border: var(--border3);
+  /* border: var(--border3); */
+  display: flex;
+  column-gap: 12px;
+  align-self: flex-start;
+  height: 80%;
+}
+.desk_intro section .i {
+  /* border: var(--border); */
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  padding: 15px;
+  height: 90%;
+  align-self: flex-end;
+}
+.desk_intro section .r {
+  background-color: rgb(228, 139, 37);
+  background-image: url(./img/smile.png);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 110% 110%;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5%;
+  font-size: clamp(24px, 3vw, 26px);
+  font-family: var(--h);
+  color: var(--white);
+  /* padding-top: 15px; */
+}
+.desk_intro section .b {
+  background-color: rgb(202, 172, 177);
+  display: flex;
+  position: relative;
+  height: calc(100% + 5.5vh);
+  width: 35%;
+  color: var(--white);
+  align-items: center;
+  justify-content: space-around;
+  font-family: var(--h);
+  padding-bottom: 10px;
+  max-width: 270px;
+}
+.desk_intro section .b h3 {
+  /* border: var(--border3); */
+  font-size: clamp(24px, 3vw, 32px);
+}
+.desk_intro section .b h5 {
+  font-size: 16px;
+  font-family: var(--h);
+}
+.desk_intro section .b a {
+  text-decoration: none;
+  color: white;
+  border: 3px solid var(--white);
+  padding: 8px;
+}
+.desk_intro section .s {
+  background-color: rgb(130, 194, 94);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  color: var(--white);
 }
 /* ANIMATIONS........................ */
 @keyframes openup {
@@ -987,5 +1052,10 @@ footer {
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: 100% 100%;
+  }
+}
+@media (max-width: 630px) {
+  .desk_intro_cont {
+    padding: 10px 20px;
   }
 }

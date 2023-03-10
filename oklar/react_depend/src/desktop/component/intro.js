@@ -17,22 +17,28 @@ export const Intro = () => {
         }
       />
       <div className="desk_intro">
-        <img src="../../../react_depend/css/img/img1.jfif" />
+        <img src="../../../react_depend/css/img/room3.jpg" />
         <section>
-          <div className="i-1">The Nigerian Royalty Comfort</div>
-          <div className="i-2">
+          <div className="i r">
+            <h3>NIGERIA.</h3>
+            <h3>ROYALTY.</h3>
+            <h3>COMFORT.</h3>
+          </div>
+          <div className="i b">
             <h3>BOOK A ROOM TODAY</h3>
             <h5>
               Enjoy our top notch services during your holidays, buisness trips
               and couple time
             </h5>
-            <a href=""></a>
+            <a href="">
+              <h4>BOOK ROOM &rarr;</h4>
+            </a>
           </div>
-          <div className="i-3">
-            <h4>24HOURS ROOM SERVICE</h4>
-            <h4>ELECTRICITY</h4>
-            <h4>AFRICAN AND INT'L DISH</h4>
-            <h4>CLOSED AND OPEN BAR</h4>
+          <div className="i s">
+            <h3>ROOM SERVICE</h3>
+            <h3>ELECTRICITY</h3>
+            <h3>AFRICAN AND INT'L DISH</h3>
+            <h3>CLOSED AND OPEN BAR</h3>
           </div>
         </section>
       </div>
