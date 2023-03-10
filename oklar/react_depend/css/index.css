@@ -659,11 +659,12 @@ footer {
 .desk_intro {
   /* border: var(--border); */
   display: grid;
-  grid-template-rows: 35vh 1fr;
-  /* row-gap: 10px; */
+  grid-template-rows: 42vh 1fr;
+  row-gap: 5px;
+  width: 100%;
   max-width: 1200px;
   justify-self: center;
-  max-height: fit-content;
+  /* max-height: fit-content; */
 }
 .desk_intro img {
   /* border: var(--border2); */
@@ -673,8 +674,9 @@ footer {
 .desk_intro section {
   /* border: var(--border3); */
   display: flex;
-  column-gap: 12px;
+  column-gap: 25px;
   align-self: flex-start;
+  justify-self: center;
   height: 80%;
 }
 .desk_intro section .i {
@@ -683,7 +685,7 @@ footer {
   flex-direction: column;
   width: 32%;
   padding: 15px;
-  height: 90%;
+  height: 95%;
   align-self: flex-end;
 }
 .desk_intro section .r {
@@ -732,6 +734,7 @@ footer {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  justify-content: center;
   color: var(--white);
 }
 /* ANIMATIONS........................ */
@@ -1054,7 +1057,7 @@ footer {
     background-position: 100% 100%;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 690px) {
   .desk_intro_cont {
     padding: 10px 20px;
   }
