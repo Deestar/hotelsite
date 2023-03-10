@@ -591,14 +591,17 @@ footer {
 
 /* DESKTOP STYLE START HERE */
 .desktop_cont {
-  /* border: var(--border); */
+  border: var(--border);
   height: var(--height);
   display: grid;
   overflow: scroll;
   grid-template-rows: 100vh;
+  width: 100vw;
+  max-width: 100vw;
 }
-.desk_intro {
-  border: var(--border);
+.desk_intro_cont {
+  border: var(--border3);
+  min-width: 100%;
   display: grid;
   grid-template-rows: 13% 1fr;
   padding: 10px var(--l);
@@ -618,7 +621,8 @@ footer {
 .desk_nav img {
   height: 100%;
   max-height: 9vh;
-  width: 100%;
+  width: clamp(250px, 100%, 800px);
+
   justify-self: start;
   /* border: var(--border2); */
 }
@@ -650,6 +654,20 @@ footer {
   top: 0;
   left: 0;
   margin-top: 3px;
+}
+.desk_intro {
+  border: var(--border);
+  display: grid;
+  grid-template-rows: 55vh 1fr;
+  row-gap: 10px;
+}
+.desk_intro img {
+  border: var(--border2);
+  width: 100%;
+  height: 100%;
+}
+.desk_intro section {
+  border: var(--border3);
 }
 /* ANIMATIONS........................ */
 @keyframes openup {
