@@ -19,6 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/service */ "./src/desktop/component/service.js");
 /* harmony import */ var _component_other__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/other */ "./src/desktop/component/other.js");
 /* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
+/* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile/component/special */ "./src/mobile/component/special.js");
+
 
 
 
@@ -29,6 +31,8 @@ var Desktop = function Desktop() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_service__WEBPACK_IMPORTED_MODULE_3__.Service, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__.Discount, {
+    d: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_special__WEBPACK_IMPORTED_MODULE_6__.Special, {
     d: true
   }));
 };
@@ -226,7 +230,9 @@ var Mobile = function Mobile() {
     handlemenu: menuClick
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_discount__WEBPACK_IMPORTED_MODULE_3__.Discount, {
     d: false
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_option__WEBPACK_IMPORTED_MODULE_4__.Option, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_footer__WEBPACK_IMPORTED_MODULE_6__.Foot, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__.SideMenu, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_option__WEBPACK_IMPORTED_MODULE_4__.Option, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, {
+    d: false
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_footer__WEBPACK_IMPORTED_MODULE_6__.Foot, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__.SideMenu, {
     handlemenu: menuClick,
     menu: menu
   }));
@@ -477,9 +483,10 @@ var Popular = function Popular(_ref) {
   var img = _ref.img,
     price = _ref.price,
     cutoff = _ref.cutoff,
-    description = _ref.description;
+    description = _ref.description,
+    d = _ref.d;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "slide_cont"
+    className: d ? "desk_slide_cont" : "slide_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: img
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\u20A6", price, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u20A6", cutoff, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, description));
@@ -542,9 +549,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Special = function Special() {
+var Special = function Special(prop) {
   var TopRooms = _roomarray__WEBPACK_IMPORTED_MODULE_3__.rooms.map(function (ele, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_popular__WEBPACK_IMPORTED_MODULE_2__.Popular, {
+      d: prop.d,
       img: ele.img,
       price: ele.price,
       cutoff: ele.cutoff,
@@ -553,11 +561,11 @@ var Special = function Special() {
     });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "special"
+    className: prop.d ? "desk_special" : "special"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "s_title"
+    className: prop.d ? "desk_s_title" : "s_title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "POPULAR"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "TOP ROOMS ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Top Rooms \u2192")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "slideshow_cont"
+    className: prop.d ? "desk_slideshow_cont" : "slideshow_cont"
   }, TopRooms));
 };
 

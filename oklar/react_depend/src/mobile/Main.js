@@ -17,7 +17,7 @@ export let Mobile = () => {
       <Intro handlemenu={menuClick} />
       <Discount d={false} />
       <Option />
-      <Special />
+      <Special d={false} />
       <Foot />
       <SideMenu handlemenu={menuClick} menu={menu} />
     </div>

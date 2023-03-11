@@ -595,7 +595,7 @@ footer {
   height: var(--height);
   display: grid;
   overflow: scroll;
-  grid-template-rows: 90vh 60vh 40vh 55vh;
+  grid-template-rows: 90vh 60vh 40vh 55vh 60vh;
   width: 100vw;
   overflow-y: auto;
   max-width: 100vw;
@@ -902,9 +902,9 @@ footer {
   border: 3px solid var(--orange);
   padding: 6px;
 }
-/* WORKING */
+
 .desk_discount {
-  /* border: var(--border); */
+  border-bottom: 2px solid rgb(121, 97, 97);
   display: flex;
   background-color: white;
   column-gap: 30px;
@@ -979,7 +979,88 @@ footer {
   height: 100%;
   max-width: 650px;
 }
-
+.desk_special {
+  /* border: var(--border); */
+  display: grid;
+  height: 100%;
+  grid-template-rows: 15% 85%;
+  row-gap: 20px;
+  padding: 20px 10px;
+}
+.desk_s_title {
+  /* border: var(--border2); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+}
+.desk_s_title > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+.desk_s_title > div h2 {
+  /* border: var(--border3); */
+  font-size: 18px;
+  letter-spacing: -1px;
+  color: orange;
+}
+.desk_s_title > div b {
+  font-weight: 800;
+  font-size: 24px;
+  color: rgb(29, 27, 27);
+  /* border: var(--border); */
+  letter-spacing: -2px;
+}
+.desk_s_title button {
+  height: fit-content;
+  padding: 6px 15px;
+  background-color: transparent;
+  border: 3px solid rgb(175, 171, 171);
+  align-self: flex-end;
+  font-weight: 600;
+  color: rgb(34, 33, 33);
+  font-size: 15px;
+}
+.desk_slideshow_cont {
+  /* border: var(--border3); */
+  display: flex;
+  column-gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+.desk_slide_cont {
+  /* border: var(--border); */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: clamp(300px, 60%, 500px);
+  row-gap: 5px;
+  font-family: helvetica;
+  scroll-snap-align: start;
+}
+.desk_slide_cont img {
+  height: 70%;
+  /* border: var(--border2); */
+  width: 100%;
+}
+.desk_slide_cont div {
+  font-size: 18px;
+  /* border: var(--border2); */
+  font-weight: 600;
+  color: rgb(44, 42, 42);
+}
+.desk_slide_cont div > span {
+  font-size: 15px;
+  text-decoration: line-through;
+  margin-left: 6px;
+  font-weight: 200;
+  color: rgb(119, 118, 118);
+}
+.desk_slide_cont h2 {
+  font-size: 17px;
+}
 /* ANIMATIONS........................ */
 @keyframes openup {
   from {
@@ -1504,6 +1585,18 @@ footer {
   }
   .desk_discount_img {
     max-height: 80%;
+  }
+  .desk_s_title button {
+    font-size: 20px;
+  }
+  .desk_slide_cont div {
+    font-size: clamp(25px, 2vh, 30px);
+  }
+  .desk_slide_cont div > span {
+    font-size: clamp(20px, 1.65vh, 23px);
+  }
+  .desk_slide_cont h2 {
+    font-size: clamp(25px, 2vh, 30px);
   }
 }
 @media (max-width: 595px) {
