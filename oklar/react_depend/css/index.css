@@ -589,7 +589,7 @@ footer {
   font-size: 13px;
 }
 
-/* DESKTOP STYLE START HERE */
+/* DESKTOP STYLE STARTS HERE */
 .desktop_cont {
   /* border: var(--border); */
   height: var(--height);
@@ -820,7 +820,7 @@ footer {
   box-shadow: 0px 1px 2px 0px rgb(88, 85, 85);
 }
 .desk_other {
-  border: var(--border);
+  /* border: var(--border); */
   display: flex;
   background-color: var(--b);
   justify-content: center;
@@ -828,6 +828,10 @@ footer {
   justify-content: space-between;
   padding: 10px var(--l);
   column-gap: 10px;
+  background-image: url(./img/leaf3.png);
+  background-repeat: no-repeat;
+  background-position: center -5%;
+  /* background-size: 100px; */
 }
 .desk_other .popular {
   /* border: var(--border2); */
@@ -845,7 +849,7 @@ footer {
   background-image: url(./img/tag.png);
   background-repeat: no-repeat;
   background-size: 40px;
-  background-position: 85% 9%;
+  background-position: 85% 20%;
   justify-content: space-between;
 }
 .desk_other .popular h3 {
@@ -858,6 +862,39 @@ footer {
   background-color: transparent;
   color: white;
   border: 3px solid var(--white);
+  padding: 6px;
+}
+.desk_other .location {
+  /* border: var(--border2); */
+  width: 27%;
+  max-width: 300px;
+  min-width: 220px;
+  height: 80%;
+  background-color: rgb(249, 250, 184);
+  color: black;
+  font-family: var(--h);
+  display: flex;
+  text-transform: capitalize;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-image: url(./img/map.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: 86% 22%;
+  justify-content: space-between;
+}
+.desk_other .location h3 {
+  font-size: clamp(23px, 3vw, 29px);
+}
+.desk_other .location h4 {
+  font-size: clamp(14px, 1.3vw, 16px);
+}
+.desk_other .location a {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  border: 3px solid var(--orange);
   padding: 6px;
 }
 /* ANIMATIONS........................ */
