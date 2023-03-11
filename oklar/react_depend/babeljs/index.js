@@ -18,6 +18,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/intro */ "./src/desktop/component/intro.js");
 /* harmony import */ var _component_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/service */ "./src/desktop/component/service.js");
 /* harmony import */ var _component_other__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/other */ "./src/desktop/component/other.js");
+/* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
+
 
 
 
@@ -26,7 +28,9 @@ __webpack_require__.r(__webpack_exports__);
 var Desktop = function Desktop() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop_cont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_service__WEBPACK_IMPORTED_MODULE_3__.Service, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_service__WEBPACK_IMPORTED_MODULE_3__.Service, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__.Discount, {
+    d: true
+  }));
 };
 
 /***/ }),
@@ -220,7 +224,9 @@ var Mobile = function Mobile() {
     ref: cont
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Intro__WEBPACK_IMPORTED_MODULE_2__.Intro, {
     handlemenu: menuClick
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_discount__WEBPACK_IMPORTED_MODULE_3__.Discount, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_option__WEBPACK_IMPORTED_MODULE_4__.Option, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_footer__WEBPACK_IMPORTED_MODULE_6__.Foot, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__.SideMenu, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_discount__WEBPACK_IMPORTED_MODULE_3__.Discount, {
+    d: false
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_option__WEBPACK_IMPORTED_MODULE_4__.Option, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_footer__WEBPACK_IMPORTED_MODULE_6__.Foot, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__.SideMenu, {
     handlemenu: menuClick,
     menu: menu
   }));
@@ -329,19 +335,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 
 
-var Discount = function Discount() {
+var Discount = function Discount(prop) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "discount"
+    className: prop.d ? "desk_discount" : "discount"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "discount_text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "ROYAL"), " PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "d_price"
+    className: prop.d ? "desk_discount_text" : "discount_text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "ROYAL"), " PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"),
+  //  prettier-ignore
+  !prop.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: prop.d ? "desk_d_price" : "d_price"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "p_no"
+    className: prop.d ? "desk_p_no" : "p_no"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "10,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u20A6")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "per day")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "p_info"
   }, "A 10% discount for Royal rooms"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "discount_img"
+    className: prop.d ? "desk_discount_img" : "discount_img"
   }));
 };
 
@@ -35903,7 +35911,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   var isMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)({
-    maxWidth: 590
+    maxWidth: 520
   });
   {
     return isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_Main__WEBPACK_IMPORTED_MODULE_2__.Mobile, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_desktop_Main__WEBPACK_IMPORTED_MODULE_3__.Desktop, null);

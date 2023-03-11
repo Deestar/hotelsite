@@ -15,7 +15,7 @@ export let Mobile = () => {
   return (
     <div className="mobile_cont" ref={cont}>
       <Intro handlemenu={menuClick} />
-      <Discount />
+      <Discount d={false} />
       <Option />
       <Special />
       <Foot />

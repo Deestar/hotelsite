@@ -87,7 +87,7 @@ body {
 .menu_cont .brand {
   padding-right: 20px;
   padding-left: 10px;
-  max-height: 40px;
+  max-height: 70px;
 }
 
 .menu_cont ul {
@@ -238,7 +238,7 @@ body {
   position: absolute;
   top: 5%;
   width: 11vw;
-  height: 12%;
+  height: clamp(35px, 12%, 45px);
   background-color: var(--orange);
   border-radius: 3px;
 }
@@ -595,10 +595,11 @@ footer {
   height: var(--height);
   display: grid;
   overflow: scroll;
-  grid-template-rows: 90vh 60vh 40vh;
+  grid-template-rows: 90vh 60vh 40vh 55vh;
   width: 100vw;
   overflow-y: auto;
   max-width: 100vw;
+
   row-gap: 10px;
 }
 .desk_intro_cont {
@@ -775,10 +776,12 @@ footer {
   max-width: 50%;
   /* border: var(--border); */
   height: 80%;
+  max-height: 550px;
 }
 .desk_service section {
   /* border: var(--border2); */
   height: 90%;
+  max-height: 600px;
   font-family: var(--h);
   display: flex;
   flex-direction: column;
@@ -839,6 +842,7 @@ footer {
   max-width: 300px;
   min-width: 220px;
   height: 80%;
+  max-height: 320px;
   background-color: rgb(206, 149, 42);
   color: var(--white);
   font-family: var(--h);
@@ -872,6 +876,7 @@ footer {
   height: 80%;
   background-color: rgb(249, 250, 184);
   color: black;
+  max-height: 320px;
   font-family: var(--h);
   display: flex;
   text-transform: capitalize;
@@ -897,6 +902,84 @@ footer {
   border: 3px solid var(--orange);
   padding: 6px;
 }
+/* WORKING */
+.desk_discount {
+  /* border: var(--border); */
+  display: flex;
+  background-color: white;
+  column-gap: 30px;
+  padding: 20px var(--l);
+  position: relative;
+  background-image: url(./img/popular.png);
+  background-repeat: no-repeat;
+  background-size: clamp(60px, 12%, 120px);
+  background-position: 3% bottom;
+  justify-content: center;
+  align-items: center;
+}
+.desk_discount_text {
+  /* border: var(--border2); */
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1vh;
+  height: 100%;
+  max-width: fit-content;
+}
+.desk_discount_text h5 {
+  /* border: var(--border); */
+  text-align: start;
+  color: rgb(250, 184, 61);
+  height: fit-content;
+  text-decoration: line-through;
+  font-size: 17px;
+}
+.desk_discount_text h2 {
+  /* border: var(--border); */
+  font-size: clamp(25px, 3.6vw, 35px);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--h);
+  align-self: flex-start;
+  letter-spacing: 1px;
+}
+.desk_discount_text h6 {
+  /* border: var(--border); */
+  font-size: clamp(14px, 1.2vw, 15px);
+  font-weight: 600;
+  height: fit-content;
+  max-width: fit-content;
+  font-family: var(--h);
+  align-self: flex-end;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-left: 20px;
+}
+.desk_discount_text button {
+  background-color: transparent;
+  border: 3px solid black;
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  font-family: helvetica;
+}
+.desk_discount_img {
+  /* border: var(--border3); */
+  width: 55%;
+  background-image: url(./img/room.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  max-width: 650px;
+}
+
 /* ANIMATIONS........................ */
 @keyframes openup {
   from {
@@ -1267,11 +1350,7 @@ footer {
     margin-top: 20px;
   }
 }
-@media (max-width: 595px) {
-  .desk_intro_cont {
-    padding: 5px 20px;
-  }
-}
+
 @media (min-width: 1250px) {
   .desk_service {
     background-image: url(./img/sun1.png);
@@ -1294,5 +1373,152 @@ footer {
   }
   .desk_intro section .i {
     padding: 9px;
+  }
+  .desk_service {
+    column-gap: 15px;
+  }
+
+  /* .desk_intro_cont {
+    border: var(--border3);
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 12% 78%;
+    padding: 20px 2px;
+
+    background-color: var(--b);
+    height: fit-content;
+  } */
+}
+@media (min-height: 1100px) {
+  .desk_intro section .b h3 {
+    font-size: clamp(24px, 2.3vh, 30px);
+  }
+  .desk_intro section .b h5 {
+    font-size: clamp(22px, 1.7vh, 25px);
+  }
+  .desk_intro section .b {
+    background-position: 110% 70%;
+  }
+
+  .desk_intro section .b a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(17px, 1.4vh, 20px);
+    border: 3px solid var(--white);
+    padding: 6px;
+  }
+  .desk_intro section .s {
+    font-size: clamp(18px, 1.45vh, 21px);
+  }
+  .desk_service section h2 {
+    font-size: clamp(35px, 3.6vh, 53px);
+  }
+  .desk_service section h2 .sm {
+    font-size: 22px;
+  }
+  .desk_service section h3 {
+    padding-left: 20px;
+    font-size: clamp(21px, 1.65vh, 24px);
+  }
+  .desk_service section .btns {
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: clamp(28px, 2vh, 40px);
+  }
+  .desk_other .popular {
+    /* border: var(--border2); */
+    width: 38%;
+    max-width: 500px;
+    min-width: 220px;
+    height: 85%;
+    max-height: 350px;
+  }
+  .desk_other .popular h3 {
+    font-size: clamp(30px, 2.3vh, 36px);
+  }
+  .desk_other .popular h4 {
+    font-size: clamp(21px, 1.7vh, 24px);
+    letter-spacing: 1px;
+  }
+  .desk_other .location {
+    /* border: var(--border2); */
+    width: 38%;
+    max-width: 500px;
+    min-width: 220px;
+    height: 85%;
+    max-height: 350px;
+    background-position: 90% 15%;
+  }
+  .desk_other .location h3 {
+    font-size: clamp(30px, 2.3vh, 36px);
+  }
+  .desk_other .location h4 {
+    font-size: clamp(21px, 1.7vh, 24px);
+    letter-spacing: 1px;
+  }
+  .desk_other .location a {
+    font-size: clamp(18px, 1.5vh, 20px);
+    letter-spacing: 1px;
+  }
+  .desk_nav ul {
+    font-size: clamp(19.5px, 1.45vh, 21px);
+  }
+  .desk_discount {
+    /* border: var(--border); */
+    display: flex;
+    background-color: white;
+    column-gap: 30px;
+    padding: 20px var(--l);
+    position: relative;
+    background-image: url(./img/popular.png);
+    background-repeat: no-repeat;
+    background-size: clamp(60px, 12%, 120px);
+    background-position: 3% bottom;
+    justify-content: center;
+    align-items: center;
+  }
+  .desk_discount_text {
+    max-height: 80%;
+    row-gap: 1.5vh;
+  }
+  .desk_discount_text h5 {
+    font-size: 20px;
+    text-decoration: line-through;
+  }
+  .desk_discount_text h2 {
+    /* border: var(--border); */
+    font-size: clamp(35px, 2.6vh, 42px);
+    line-height: 1.5;
+  }
+  .desk_discount_text h6 {
+    /* border: var(--border); */
+    font-size: clamp(20px, 1.7vh, 26px);
+    line-height: 1.5;
+  }
+  .desk_discount_text button {
+    padding: 10px;
+    font-size: clamp(21px, 1.55vh, 23px);
+    letter-spacing: 1px;
+  }
+  .desk_discount_img {
+    max-height: 80%;
+  }
+}
+@media (max-width: 595px) {
+  .desk_intro_cont {
+    padding: 5px 25px;
+    /* border: var(--border); */
+  }
+}
+
+@media (max-width: 550px) {
+  .desk_nav img {
+    /* border: var(--border); */
+    margin-left: -20px;
+  }
+  .desktop_cont {
+    overflow-x: hidden;
   }
 }
