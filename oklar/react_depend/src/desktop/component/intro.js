@@ -37,7 +37,7 @@ export const Intro = () => {
               Enjoy our top notch services during your holidays, buisness trips
               and couple time
             </h5>
-            <a href="">
+            <a href="../../../room.html">
               <h4>BOOK ROOM &rarr;</h4>
             </a>
           </div>
