@@ -17,9 +17,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _component_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/intro */ "./src/desktop/component/intro.js");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module './component/service'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './component/other'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
-/* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/special */ "./src/mobile/component/special.js");
+/* harmony import */ var _component_other__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/other */ "./src/desktop/component/other.js");
+/* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
+/* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile/component/special */ "./src/mobile/component/special.js");
 
 
 
@@ -30,9 +30,9 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 var Desktop = function Desktop() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop_cont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Object(function webpackMissingModule() { var e = new Error("Cannot find module './component/service'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Object(function webpackMissingModule() { var e = new Error("Cannot find module './component/other'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_4__.Discount, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Object(function webpackMissingModule() { var e = new Error("Cannot find module './component/service'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__.Discount, {
     d: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_special__WEBPACK_IMPORTED_MODULE_5__.Special, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_special__WEBPACK_IMPORTED_MODULE_6__.Special, {
     d: true
   }));
 };
@@ -109,6 +109,36 @@ var Intro = function Intro() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "BOOK ROOM \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "i s"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ROOM SERVICE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ELECTRICITY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "AFRICAN & INT'L DISH"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "CLOSED & OPEN BAR")))));
+};
+
+/***/ }),
+
+/***/ "./src/desktop/component/other.js":
+/*!****************************************!*\
+  !*** ./src/desktop/component/other.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Other": () => (/* binding */ Other)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+
+
+var Other = function Other() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "desk_other"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "popular"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "SPECIAL OFFERS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Get more value for your money with our special rooms, tailoured to meet your unique needs and preferences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "SPECIAL OFFERS \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "location"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "OUR LOCATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Our hotel is located at Egbeda, A top spot on Lagos Mainland, one of the city's main roads"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: ""
+  }, "LOCATE US \u2192")));
 };
 
 /***/ }),
