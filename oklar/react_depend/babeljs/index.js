@@ -21,6 +21,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
 /* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile/component/special */ "./src/mobile/component/special.js");
 /* harmony import */ var _mobile_component_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../mobile/component/footer */ "./src/mobile/component/footer.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -30,9 +44,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Desktop = function Desktop() {
+  var ref1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var ref2 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var ref3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var ref4 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var ref5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      service: false,
+      special: false,
+      specials: false
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    animate = _useState2[0],
+    setAnimate = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (_ref, i) {
+        var target = _ref.target,
+          isIntersecting = _ref.isIntersecting,
+          intersectionRatio = _ref.intersectionRatio;
+        if (intersectionRatio > 0.45 && target.dataset.name != "special") {
+          setAnimate(function (prev) {
+            return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, target.dataset.name, true));
+          });
+        } else {
+          if (target.dataset.name == "special" && intersectionRatio > 0.8) {
+            setAnimate(function (prev) {
+              return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, target.dataset.name, true));
+            });
+          }
+        }
+      });
+    }, {
+      threshold: [0.45, 0.8]
+    });
+    [ref1.current, ref2.current, ref3.current].forEach(function (e) {
+      return observer.observe(e);
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop_cont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_service__WEBPACK_IMPORTED_MODULE_3__.Service, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__.Discount, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_intro__WEBPACK_IMPORTED_MODULE_2__.Intro, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_service__WEBPACK_IMPORTED_MODULE_3__.Service, {
+    isanimated: animate,
+    service_ref: ref1
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_other__WEBPACK_IMPORTED_MODULE_4__.Other, {
+    isanimated: animate,
+    special_ref: ref2
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__.Discount, {
+    isanimated: animate,
+    specials_ref: ref3,
     d: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_component_special__WEBPACK_IMPORTED_MODULE_6__.Special, {
     d: true
@@ -133,13 +193,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 
 
-var Other = function Other() {
+var Other = function Other(prop) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "desk_other"
+    className: "desk_other",
+    "data-name": "special",
+    ref: prop.special_ref
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    className: "popular"
+    className: prop.isanimated.special ? "popular shaky" : "popular"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "SPECIAL OFFERS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Get more value for your money with our special rooms, tailoured to meet your unique needs and preferences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "SPECIAL OFFERS \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    className: "location"
+    className: prop.isanimated.special ? "location shaka" : "location"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "OUR LOCATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Our hotel is located at Egbeda, A top spot on Lagos Mainland, one of the city's main roads"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: ""
   }, "LOCATE US \u2192")));
@@ -162,12 +224,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var Service = function Service() {
+var Service = function Service(prop) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    "data-name": "service",
+    ref: prop.service_ref,
     className: "desk_service"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: "../../../react_depend/css/img/beach1.jpg"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  }, prop.isanimated.service && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "../../../react_depend/css/img/beach1.jpg",
+    "data-name": "beach"
+  }),
+  // prettier-ignore
+  prop.isanimated.service && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "s1"
   }, "SERVICE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "sm"
@@ -347,8 +414,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Discount = function Discount(prop) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: prop.d ? "desk_discount" : "discount"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: prop.d ? prop.specials_ref : null,
+    className: prop.d ? "desk_discount" : "discount",
+    "data-name": "specials"
+  }, prop.isanimated.specials && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_discount_text" : "discount_text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "ROYAL"), " PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"),
   //  prettier-ignore

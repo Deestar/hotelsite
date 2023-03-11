@@ -777,7 +777,9 @@ footer {
   /* border: var(--border); */
   height: 80%;
   max-height: 550px;
+  animation: beachslide ease-in 1s alternate;
 }
+
 .desk_service section {
   /* border: var(--border2); */
   height: 90%;
@@ -787,6 +789,7 @@ footer {
   flex-direction: column;
   max-width: 35%;
   row-gap: 15px;
+  animation: serviceShow 1s ease-in alternate;
 }
 .desk_service section h2 {
   font-size: clamp(30px, 3.6vw, 53px);
@@ -836,6 +839,7 @@ footer {
   background-position: center -5%;
   /* background-size: 100px; */
 }
+
 .desk_other .popular {
   /* border: var(--border2); */
   width: 27%;
@@ -855,6 +859,9 @@ footer {
   background-size: 40px;
   background-position: 85% 20%;
   justify-content: space-between;
+}
+.shaky {
+  animation: shaky 0.5s ease-in alternate;
 }
 .desk_other .popular h3 {
   font-size: clamp(23px, 3vw, 29px);
@@ -889,6 +896,9 @@ footer {
   background-position: 86% 22%;
   justify-content: space-between;
 }
+.shaka {
+  animation: shaka 0.5s ease-in alternate;
+}
 .desk_other .location h3 {
   font-size: clamp(23px, 3vw, 29px);
 }
@@ -906,6 +916,7 @@ footer {
 .desk_discount {
   border-bottom: 2px solid rgb(121, 97, 97);
   display: flex;
+  overflow-y: hidden;
   background-color: white;
   column-gap: 30px;
   padding: 20px var(--l);
@@ -917,6 +928,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .desk_discount_text {
   /* border: var(--border2); */
   width: 35%;
@@ -926,6 +938,7 @@ footer {
   row-gap: 1vh;
   height: 100%;
   max-width: fit-content;
+  animation: specialSlide 1s ease-in alternate;
 }
 .desk_discount_text h5 {
   /* border: var(--border); */
@@ -1130,6 +1143,46 @@ footer {
   }
   to {
     width: 80vw;
+  }
+}
+@keyframes shaky {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shaka {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes serviceShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes specialSlide {
+  from {
+    transform: translateY(-150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes beachslide {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 @keyframes slideleft {
