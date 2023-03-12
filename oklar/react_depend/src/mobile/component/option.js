@@ -10,6 +10,7 @@ export let Option = () => {
     //The intersection object is set to be observing but the function will run only when the inersection ratio reaches one of the threshold provided
     const observer = new IntersectionObserver(
       ([entry1]) => {
+        console.log("still observing mobile ");
         if (entry1.intersectionRatio > 0.55) {
           setOptInView(true);
         } else if (entry1.intersectionRatio < 0.36) {
@@ -21,7 +22,7 @@ export let Option = () => {
       }
     );
     observer.observe(option.current);
-  });
+  }, []);
   return (
     <div ref={option} className="option">
       <div className="service">
@@ -49,6 +50,14 @@ export let Option = () => {
             optinview &&
          <div className="right2">
             <h6>Closed & Open Bar </h6>
+            <h1>.</h1>
+          </div>
+          }
+          {
+            //prettier-ignore
+            optinview &&
+         <div className="right2">
+            <h6>Constant Electricity </h6>
             <h1>.</h1>
           </div>
           }

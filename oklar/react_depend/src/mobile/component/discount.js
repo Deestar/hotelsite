@@ -7,7 +7,7 @@ export const Discount = (prop) => {
       className={prop.d ? "desk_discount" : "discount"}
       data-name="specials"
     >
-      {prop.isanimated.specials && (
+      {(prop.isanimated ? prop.isanimated.specials : true) && (
         <div className={prop.d ? "desk_discount_text" : "discount_text"}>
           <h5>SPECIALS</h5>
           {prop.d ? (
@@ -18,7 +18,7 @@ export const Discount = (prop) => {
           ) : (
             <h2>
               STAY LONG, SAVE MORE <br />
-              WITH OUR <span>ROYAL</span> PLANS
+              WITH OUR ROYAL PLANS
             </h2>
           )}
           <h6>

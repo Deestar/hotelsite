@@ -47,8 +47,6 @@ var Desktop = function Desktop() {
   var ref1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var ref2 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var ref3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var ref4 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var ref5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
       service: false,
       special: false,
@@ -417,9 +415,9 @@ var Discount = function Discount(prop) {
     ref: prop.d ? prop.specials_ref : null,
     className: prop.d ? "desk_discount" : "discount",
     "data-name": "specials"
-  }, prop.isanimated.specials && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, (prop.isanimated ? prop.isanimated.specials : true) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_discount_text" : "discount_text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "ROYAL"), " PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ROYAL PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"),
   //  prettier-ignore
   !prop.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_d_price" : "d_price"
@@ -502,6 +500,7 @@ var Option = function Option() {
     var observer = new IntersectionObserver(function (_ref) {
       var _ref2 = _slicedToArray(_ref, 1),
         entry1 = _ref2[0];
+      console.log("still observing mobile ");
       if (entry1.intersectionRatio > 0.55) {
         setOptInView(true);
       } else if (entry1.intersectionRatio < 0.36) {
@@ -511,7 +510,7 @@ var Option = function Option() {
       threshold: [0.36, 0.55]
     });
     observer.observe(option.current);
-  });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     ref: option,
     className: "option"
@@ -531,7 +530,11 @@ var Option = function Option() {
   //prettier-ignore
   optinview && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "right2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "Closed & Open Bar "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, ".")))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "Closed & Open Bar "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, ".")),
+  //prettier-ignore
+  optinview && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "right2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "Constant Electricity "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, ".")))));
 };
 
 /***/ }),
@@ -35992,7 +35995,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   var isMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)({
-    maxWidth: 520
+    maxWidth: 540
   });
   {
     return isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_Main__WEBPACK_IMPORTED_MODULE_2__.Mobile, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_desktop_Main__WEBPACK_IMPORTED_MODULE_3__.Desktop, null);

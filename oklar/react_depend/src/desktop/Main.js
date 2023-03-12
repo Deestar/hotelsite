@@ -12,8 +12,6 @@ export const Desktop = () => {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const ref5 = useRef(null);
   const [animate, setAnimate] = useState({
     service: false,
     special: false,

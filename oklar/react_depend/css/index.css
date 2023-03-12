@@ -141,6 +141,7 @@ body {
   display: grid;
   grid-template-rows: 30vh 50vh 45vh 58vh 10vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .intro_cont {
   display: flex;
@@ -178,14 +179,12 @@ body {
   background-repeat: no-repeat;
 }
 .intro-1 h1 {
-  /* border: var(--border); */
-  font-size: 18px;
+  font-size: clamp(10px, 6vw, 25px);
   font-family: helvetica;
   color: white;
   padding-left: 5%;
   letter-spacing: 1px;
   max-height: fit-content;
-  vertical-align: baseline;
   display: grid;
 
   align-items: flex-start;
@@ -215,8 +214,9 @@ body {
   letter-spacing: 1px;
   font-size: 14px;
   font-family: helvetica;
+
   font-weight: 600;
-  padding: 3px;
+  padding: 1px 3px;
 }
 .intro-2 a span {
   margin-left: 1px;
@@ -278,16 +278,11 @@ body {
 .discount_text h2 {
   /* border: var(--border); */
   text-align: start;
-  font-family: sans-serif;
+  font-family: var(--h);
   font-weight: 800;
-  font-size: 17px;
+  font-size: clamp(13px, 4.3vw, 19px);
   height: fit-content;
   letter-spacing: -1px;
-}
-.discount_text h2 span {
-  font-style: italic;
-  font-weight: 800;
-  font-size: 23px;
 }
 .discount_text h6 {
   /* border: var(--border); */
@@ -364,14 +359,15 @@ body {
   font-family: helvetica;
   font-size: 11px;
 }
+/* WORKING */
 .option {
   /* border: var(--border2); */
   margin-top: 6vh;
   background-color: rgb(48, 38, 38);
-  background-image: url(./img/leaf2.png), url(./img/sunflower.png);
-  background-size: 40%, 30%;
+  background-image: url(./img/leaf2.png);
+  background-size: 40%;
   background-repeat: no-repeat;
-  background-position: 100% 100%, 10% 290%;
+  background-position: 100% 100%;
   overflow: hidden;
   display: flex;
   padding: 20px;
@@ -387,7 +383,7 @@ body {
 .service h2 {
   /* border: var(--border); */
   color: var(--white);
-  font-size: 17px;
+  font-size: clamp(19px, 5.8vw, 20px);
   font-family: helvetica;
   letter-spacing: -1px;
   word-spacing: 2px;
@@ -420,7 +416,9 @@ body {
   display: grid;
   height: fit-content;
   align-self: flex-end;
-  font-size: 15px;
+  font-family: var(--h);
+  font-size: clamp(16px, 6.1vw, 24px);
+  letter-spacing: 1px;
 }
 .s_list div h1 {
   /* border: var(--border2); */
@@ -463,15 +461,17 @@ body {
 .s_title > div h2 {
   /* border: var(--border3); */
   font-size: 18px;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
+  font-family: var(--h);
   color: orange;
 }
 .s_title > div b {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 24px;
+  font-family: var(--h);
   color: rgb(29, 27, 27);
   /* border: var(--border); */
-  letter-spacing: -2px;
+  letter-spacing: 1px;
 }
 .s_title button {
   height: fit-content;
@@ -528,6 +528,7 @@ footer {
   /* border: var(--border3); */
   display: flex;
   width: 100vw;
+  max-width: 100vw;
   /* max-height: fit-content; */
   padding: 10px 10px;
   background-color: rgb(48, 38, 38);
@@ -598,10 +599,12 @@ footer {
   grid-template-rows: 90vh 60vh 40vh 55vh 60vh 10vh;
   width: 100vw;
   overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   max-width: 100vw;
-
   row-gap: 10px;
 }
+
 .desk_intro_cont {
   /* border: var(--border3); */
   min-width: 100%;
@@ -995,10 +998,12 @@ footer {
 .desk_special {
   /* border: var(--border); */
   display: grid;
+  overflow: hidden;
   height: 100%;
   grid-template-rows: 15% 85%;
   row-gap: 20px;
   padding: 20px 10px;
+  overflow-x: hidden;
 }
 .desk_s_title {
   /* border: var(--border2); */
@@ -1006,6 +1011,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   height: fit-content;
+  padding-right: 20px;
 }
 .desk_s_title > div {
   display: flex;
@@ -1027,7 +1033,7 @@ footer {
 }
 .desk_s_title button {
   height: fit-content;
-  padding: 6px 15px;
+  padding: 6px 10px;
   background-color: transparent;
   border: 3px solid rgb(175, 171, 171);
   align-self: flex-end;
@@ -1206,7 +1212,7 @@ footer {
     word-spacing: -1px;
   }
   .s_list div h6 {
-    font-size: 23px;
+    /* font-size: 23px; */
     line-height: 1.4;
   }
   .s_list div h1 {
@@ -1241,14 +1247,8 @@ footer {
     text-align: start;
     font-family: sans-serif;
     font-weight: 800;
-    font-size: 12px;
     height: fit-content;
     letter-spacing: -1px;
-  }
-  .discount_text h2 span {
-    font-style: italic;
-    font-weight: 800;
-    font-size: 23px;
   }
   .discount_text h6 {
     font-size: 15px;
@@ -1394,7 +1394,7 @@ footer {
     background-position: 147% -180%;
   }
   .s_list div h6 {
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 1;
   }
   .service h2 {
@@ -1405,7 +1405,7 @@ footer {
     background-position: 110% 100%, 10% 195px;
   }
 }
-@media (max-width: 414px) and (min-width: 414px) and (max-height: 736px) {
+@media (width: 414px) and (height: 736px) {
   .discount_text h6 {
     font-size: 20px;
   }
@@ -1436,7 +1436,7 @@ footer {
     margin-bottom: 2px;
   }
   .intro-2 h4 {
-    font-size: 17px;
+    font-size: clamp(11px, 6vw, 14px);
   }
   .intro {
     font-family: helvetica;
@@ -1445,9 +1445,6 @@ footer {
   .discount_text h6 {
     font-size: 16px;
     font-weight: 600;
-  }
-  .discount_text h2 {
-    font-size: 14px;
   }
   .option {
     background-color: rgb(48, 38, 38);
@@ -1472,7 +1469,7 @@ footer {
     font-size: 18px;
   }
   .s_list div h6 {
-    font-size: 19px;
+    /* font-size: 19px; */
   }
   .img_text h1 {
     font-size: 14px;
@@ -1496,9 +1493,25 @@ footer {
     background-position: 100% 100%;
   }
 }
+
 @media (max-width: 690px) {
   .desk_intro_cont {
-    padding: 10px 20px;
+    padding: 10px 10px;
+    justify-content: center;
+  }
+  .desk_nav {
+    display: grid;
+    width: 98%;
+    justify-content: space-between;
+    grid-template-columns: 40% 60%;
+    column-gap: 0px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(221, 218, 218, 0.199);
+  }
+  .desk_intro {
+    width: 97%;
+    margin-left: -10px;
   }
   .desk_intro h1 {
     position: absolute;
@@ -1715,18 +1728,29 @@ footer {
   }
 }
 @media (max-width: 595px) {
-  .desk_intro_cont {
-    padding: 5px 25px;
-    /* border: var(--border); */
+  .desk_nav img {
+    width: clamp(200px, 100%, 800px);
   }
 }
 
 @media (max-width: 550px) {
-  .desk_nav img {
-    /* border: var(--border); */
-    margin-left: -20px;
+  .desk_nav {
+    grid-template-columns: 30% 60%;
+  }
+  .desk_nav ul {
+    margin-right: 9px;
   }
   .desktop_cont {
     overflow-x: hidden;
+  }
+}
+@media (min-width: 541px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--b);
   }
 }
