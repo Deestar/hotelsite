@@ -1,12 +1,10 @@
 import React from "react";
 import { ReactDOM } from "react";
-
+import Beach from "../../css/img/beach1.jpg";
 export const Service = (prop) => {
   return (
     <div data-name="service" ref={prop.service_ref} className="desk_service">
-      {prop.isanimated.service && (
-        <img src="../../../react_depend/css/img/beach1.jpg" data-name="beach" />
-      )}
+      {prop.isanimated.service && <img src={Beach} data-name="beach" />}
       {
         // prettier-ignore
         prop.isanimated.service &&

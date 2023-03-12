@@ -2,16 +2,15 @@ import React from "react";
 import { ReactDOM } from "react-dom/client";
 import { Nav } from "./Navbar";
 import { useMediaQuery } from "react-responsive";
+import Brand1 from "../../css/img/oklarpng.png";
+import Brand2 from "../../css/img/oklarpng2.png";
+import Room from "../../css/img/room.jpg";
 export const Intro = () => {
-  const isMobile = useMediaQuery({ minWidth: 1180 });
+  const isLarge = useMediaQuery({ minWidth: 1180 });
   return (
     <div className="desk_intro_cont">
       <Nav
-        brand={
-          isMobile
-            ? "../../../react_depend/css/img/oklarpng.png"
-            : "../../../react_depend/css/img/oklarpng2.png"
-        }
+        brand={isLarge ? Brand1 : Brand2}
         list={
           <>
             <li>HOME</li>
@@ -23,7 +22,7 @@ export const Intro = () => {
         }
       />
       <div className="desk_intro">
-        <img src="../../../react_depend/css/img/room3.jpg" />
+        <img src={Room} />
         <h1>STAY WITH COMFORT</h1>
         <section>
           <div className="i r">

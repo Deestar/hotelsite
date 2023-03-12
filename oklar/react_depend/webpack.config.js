@@ -6,6 +6,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "/babeljs"),
+    //THIS DESCRIBE THE PATH YOU WANT YOU IMAGES TO GO TO
+    assetModuleFilename: "img/[name].[ext]",
     //saves the name of the js file with the entry name above
     filename: `[name].js`,
   },
@@ -42,16 +44,9 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpg|gif|jpeg)$/, //This is to search for an image with ext or .....
-        use: [
-          {
-            loader: "file-loader", //This is a loader for images,installed in dev-dependency,in pakage.json
-            options: {
-              name: "[name].[ext]", //Uses the name of the image and its extention
-              ouputPath: "img/",
-            },
-          },
-        ],
+        //This is to search for an image with ext or .....
+        test: /\.(png|jpg|gif|jpeg)$/,
+        type: "asset/resource",
       },
     ],
   },
