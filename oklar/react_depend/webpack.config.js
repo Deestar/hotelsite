@@ -48,7 +48,7 @@ module.exports = {
             loader: "file-loader", //This is a loader for images,installed in dev-dependency,in pakage.json
             options: {
               name: "[name].[ext]", //Uses the name of the image and its extention
-              // ouputPath: "images/",
+              ouputPath: "img/",
             },
           },
         ],
