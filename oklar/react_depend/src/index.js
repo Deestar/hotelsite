@@ -4,7 +4,7 @@ import { Mobile } from "./mobile/Main";
 import { Desktop } from "./desktop/Main";
 import { createRoot } from "react-dom/client";
 import { useMediaQuery } from "react-responsive";
-import "./css/index.css"
+
 const App = () => {
   const isMobile = useMediaQuery({ maxWidth: 540 });
   {
