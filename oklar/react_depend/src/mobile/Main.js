@@ -8,6 +8,7 @@ import { Foot } from "./component/footer";
 import { SideMenu } from "./component/Sidemenu";
 import { useState } from "react";
 import { useRef } from "react";
+import "../css/index.css";
 export let Mobile = () => {
   const cont = useRef(null);
   const [menu, setMenu] = useState(false);

@@ -10,7 +10,6 @@ export let Option = () => {
     //The intersection object is set to be observing but the function will run only when the inersection ratio reaches one of the threshold provided
     const observer = new IntersectionObserver(
       ([entry1]) => {
-        console.log("still observing mobile ");
         if (entry1.intersectionRatio > 0.55) {
           setOptInView(true);
         } else if (entry1.intersectionRatio < 0.36) {
