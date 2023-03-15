@@ -7,7 +7,7 @@ import { Discount } from "../mobile/component/discount";
 import { Special } from "../mobile/component/special";
 import { Foot } from "../mobile/component/footer";
 import { useRef } from "react";
-import "../css/index.css";
+
 import { useState } from "react";
 export const Desktop = () => {
   const ref1 = useRef(null);

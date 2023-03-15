@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
-import Boque from "../../css/img/bouque.png";
+import Boque from "../../../css/img/bouque.png";
 export const Foot = (prop) => {
   return (
     <footer>

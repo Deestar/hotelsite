@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
-import Home from "../../css/img/home.png";
-import Book from "../../css/img/book.png";
-import Food from "../../css/img/restaurant.png";
-import Popular from "../../css/img/popular.png";
-import Contact from "../../css/img/contact.png";
-import Brand from "../../css/img/oklarpng.png";
-import Cancel from "../../css/img/cancel.png";
+import Home from "../../../css/img/home.png";
+import Book from "../../../css/img/book.png";
+import Food from "../../../css/img/restaurant.png";
+import Popular from "../../../css/img/popular.png";
+import Contact from "../../../css/img/contact.png";
+import Brand from "../../../css/img/oklarpng.png";
+import Cancel from "../../../css/img/cancel.png";
 export const SideMenu = (prop) => {
   const goRoom = () => {
     location.assign("../../../room.html");

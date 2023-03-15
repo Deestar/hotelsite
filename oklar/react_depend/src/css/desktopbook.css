@@ -1,0 +1,493 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--darkwhite);
+  background-attachment: fixed;
+}
+
+:root {
+  --darkwhite: rgba(235, 231, 231, 0.923);
+}
+/* PRELOADED DIV */
+.pree {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+
+  background-color: rgb(104, 103, 103);
+  z-index: 999;
+  display: grid;
+  place-content: center;
+  top: 0;
+  font-family: helvetica;
+  box-sizing: border-box;
+  overflow: hidden;
+  grid-template-areas:
+    "aa bb cc dd"
+    " ee ee ee ee ";
+}
+.pree b {
+  color: rgb(29, 27, 27);
+  white-space: nowrap;
+  letter-spacing: 2px;
+  animation: predisplay 1s steps(4, end) infinite alternate;
+  grid-area: ee;
+  margin-left: -60px;
+  font-size: 26px;
+}
+.pre_circ1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(223, 61, 61, 0.767);
+  margin-bottom: 30px;
+  grid-area: aa;
+  margin-left: 10px;
+  animation: firstt 1s steps(4, end) infinite alternate;
+}
+.pre_circ2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(60, 173, 111, 0.733);
+  margin-bottom: 30px;
+  margin-left: -40px;
+  grid-area: bb;
+  animation: secondd 1s steps(4, end) infinite alternate;
+}
+.pre_circ3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(66, 120, 165, 0.733);
+  margin-bottom: 30px;
+  margin-left: -50px;
+  grid-area: cc;
+  animation: thirdd 1s steps(4, end) infinite alternate;
+}
+.pre_circ4 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(168, 88, 155, 0.733);
+  margin-bottom: 30px;
+  margin-left: -60px;
+  grid-area: dd;
+  animation: fourth 1s steps(4, end) infinite alternate;
+}
+
+/* DESKTOP CSS CODES */
+.main_cont_desktop {
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  column-gap: 5px;
+  height: var(--height);
+  width: 100vw;
+}
+/* DESKTOP LEFT SIDE */
+.left_side_desktop {
+  background-color: rgba(255, 255, 255, 0.892);
+  height: 100vh;
+  /* border: var(--border2); */
+  display: grid;
+  grid-template-rows: 12% 65% 22%;
+  row-gap: 1%;
+  width: 100%;
+  /* padding: 5px 0px; */
+}
+.hotel_name_desktop {
+  /* border: var(--border); */
+  max-width: 25vw;
+  display: grid;
+  align-items: center;
+  padding: 0px 2px;
+}
+.hotel_name_desktop img {
+  width: 100%;
+  max-width: 100%;
+  height: 70%;
+  max-height: 100%;
+}
+.menu_bar_desktop {
+  display: grid;
+  padding-left: 1vw;
+  align-items: center;
+  /* border: var(--border3); */
+  max-width: 25vw;
+}
+.menu_bar_desktop a:nth-child(4) {
+  letter-spacing: normal;
+}
+
+.menu_bar_desktop a {
+  color: rgb(12, 9, 9);
+  /* border: var(--border2); */
+  background-color: var(--darkwhite);
+  white-space: nowrap;
+  padding: 10px;
+  letter-spacing: 3px;
+  font-size: clamp(15px, 1.5vw, 26px);
+  max-width: 23.5vw;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: 2px solid rgb(26, 155, 235);
+}
+.menu_bar_desktop a:nth-child(2) {
+  color: rgb(25, 140, 211);
+  border-right: none;
+}
+.menu_bar_desktop a:hover {
+  color: rgb(25, 140, 211);
+  cursor: pointer;
+}
+.discount {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: sans-serif;
+  background-image: url(./img/img2.jpg);
+  background-position: top;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  filter: opacity(0.8);
+  /* border: var(--border2); */
+}
+
+.discount b {
+  padding-left: 8px;
+}
+
+/* DESKTOP MIDDLE SIDE */
+.mid_side_desktop {
+  /* border: var(--border); */
+  display: grid;
+  grid-template-rows: 0.5fr 0.3fr 2.1fr 1.2fr;
+  gap: 15px;
+  height: 100vh;
+  overflow: hidden;
+}
+.header_desktop {
+  /* border: var(--border2); */
+  display: grid;
+
+  place-content: center;
+
+  max-width: 50vw;
+}
+.header_desktop h2 {
+  font-family: "aladin", Helvetica;
+  letter-spacing: 5px;
+  font-style: italic;
+  text-shadow: 1px 2px 2px rgb(25, 140, 211);
+}
+.header_desktop h2:hover {
+  text-shadow: 2px 1px 1px rgba(25, 140, 211, 0.589);
+}
+.hotel_type_cont_desktop {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  /* border: var(--border2); */
+  height: 70%;
+  justify-content: flex-start;
+  letter-spacing: 3px;
+  max-width: 50vw;
+  overflow-x: auto;
+  border-bottom: 2px solid rgba(39, 141, 204, 0.673);
+  border-top: 2px solid rgba(39, 141, 204, 0.673);
+  padding: 0px 5px;
+}
+::-webkit-scrollbar {
+  height: 0.5px;
+  color: white;
+}
+.hotel_type_cont_desktop a {
+  /* border: var(--border); */
+  padding: 5px;
+  color: rgb(12, 9, 9);
+  height: 80%;
+  background-color: rgba(194, 217, 231, 0.673);
+  display: grid;
+  place-content: center;
+  box-shadow: 2px 2px 0px 2px rgba(183, 204, 217, 0.603) inset,
+    -2px -2px 0px 2px rgba(183, 204, 217, 0.603) inset;
+}
+
+.hotel_type_cont_desktop a:hover {
+  background-color: rgba(39, 141, 204, 0.673);
+}
+/* FOR THE ROOMS IN DESKTOP VIEW */
+.main_rooms_cont_desktop {
+  display: flex;
+  /* border: var(--border); */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-left: 10px;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+/* THE DIV CONTAING THE CONTAINER FOR THE ROOMS */
+.rooms_type_cont_desktop {
+  display: flex;
+  gap: 19px;
+  /* border: var(--border2); */
+  min-width: 100%;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  scroll-snap-align: end;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.rooms_type_cont_desktop:nth-child(1) {
+  padding-left: 20px;
+}
+
+/* THE DIV CONTAINER FOR ROOM IMAGES AND DESCRIPTIONS  */
+.rooms_desktop {
+  /* border: var(--border3); */
+  min-width: 80%;
+  scroll-snap-align: start;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.img_desktop {
+  /* border: var(--border2); */
+  border-radius: 10px;
+  margin: 15px;
+  margin-top: 8px;
+  height: 100%;
+  background-image: url(./img/img6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.decr_desktop {
+  /* border: var(--border2); */
+  display: grid;
+  overflow: hidden;
+  font-family: var(--h);
+  box-sizing: border-box;
+  padding: 2px 10px;
+  place-content: center;
+  row-gap: 20px;
+  height: 60%;
+  min-height: fit-content;
+  color: rgb(37, 37, 37);
+}
+
+.decr_desktop b {
+  /* border: var(--border); */
+  font-size: clamp(18px, 2.4vw, 23px);
+}
+.decr_desktop h2 {
+  font-size: clamp(20px, 2.7vw, 25px);
+}
+.decr_desktop h2 span {
+  font-size: clamp(12px, 1.5vw, 15px);
+}
+/* FOOD AND DRINKS FROM RESTAURANT SLIDE SHOW */
+.restaurant_desktop {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10px;
+}
+.dish_img {
+  border-radius: 30px;
+  animation: food 25s ease infinite alternate-reverse;
+  filter: opacity(0.7);
+}
+.drink_img {
+  border-radius: 30px;
+  display: grid;
+  animation: drink 15s ease infinite alternate-reverse;
+
+  filter: opacity(0.7);
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(252, 198, 137, 0.977);
+}
+.shadow {
+  height: 100%;
+  background-color: rgba(26, 25, 25, 0.196);
+  z-index: 300;
+  font-size: 25px;
+  display: grid;
+  color: rgb(27, 24, 24);
+  font-family: helvetica;
+  place-content: center;
+  padding-left: 20px;
+}
+
+/* DESKTOP RIGHT SIDE */
+.right_side_desktop {
+  display: grid;
+  gap: 15px;
+  /* padding: 10px; */
+  grid-template-rows: 2.2fr 1.3fr 0.5fr;
+  background-color: rgba(253, 252, 252, 0.973);
+  /* border: var(--border); */
+  max-width: 24vw;
+}
+.right_img_cont {
+  /* border: var(--border2); */
+  max-width: 24vw;
+  display: grid;
+  grid-template-rows: 92% 7%;
+  row-gap: 1%;
+}
+.right_img_cont > img {
+  /* border: var(--border3); */
+  max-width: 24vw;
+  height: 100%;
+}
+.right_img_cont .direct {
+  /* border: var(--border); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+}
+.right_img_cont img.left {
+  height: 30px;
+  animation: none;
+}
+.right_img_cont img.right {
+  height: 20px;
+  animation: none;
+}
+.right_descr {
+  font-size: clamp(20px, 2.9vw, 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: var(--border); */
+  max-width: 24vw;
+  padding: 5px;
+  font-family: helvetica;
+  border-bottom: 8px solid rgb(11, 100, 178);
+  border-top: 8px solid rgb(11, 100, 178);
+}
+.right_price {
+  padding: 8px;
+  display: grid;
+  /* border: var(--border); */
+  place-content: center;
+}
+.right_price button {
+  max-width: 24vw;
+  background-color: rgb(11, 100, 178);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.right_price button:hover {
+  background-color: rgba(50, 104, 151, 0.74);
+}
+.right_descr h2 {
+  font-size: clamp(22px, 3.1vw, 27px);
+  /* border: var(--border); */
+}
+.right_descr h2 span {
+  font-size: clamp(14px, 1.6vw, 17px);
+}
+@keyframes food {
+  0% {
+    background-image: url(./img/dish1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background-image: url(./img/dish2.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background-image: url(./img/dish3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@keyframes drink {
+  0% {
+    background-image: url(./img/drink1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background-image: url(./img/drink2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background-image: url(./img/drink3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+@keyframes predisplay {
+  0% {
+    color: rgba(10, 4, 4, 0.829);
+  }
+  25% {
+    color: rgba(43, 30, 30, 0.63);
+  }
+  50% {
+    color: rgba(70, 63, 63, 0.555);
+  }
+  75% {
+    color: rgba(105, 92, 92, 0.342);
+  }
+  100% {
+    color: rgba(126, 117, 117, 0);
+  }
+}
+@keyframes firstt {
+  from {
+    background-color: rgba(223, 61, 61, 0.767);
+  }
+  to {
+    background-color: rgba(168, 88, 155, 0.733);
+  }
+}
+@keyframes secondd {
+  from {
+    background-color: rgba(60, 173, 111, 0.733);
+  }
+  to {
+    background-color: rgba(223, 61, 61, 0.767);
+  }
+}
+@keyframes thirdd {
+  from {
+    background-color: rgba(66, 120, 165, 0.733);
+  }
+  to {
+    background-color: rgba(60, 173, 111, 0.733);
+  }
+}
+@keyframes fourth {
+  from {
+    background-color: rgba(168, 88, 155, 0.733);
+  }
+  to {
+    background-color: rgba(66, 120, 165, 0.733);
+  }
+}
+@media (min-width: 1067px) {
+  .hotel_type_cont_desktop {
+    justify-content: center;
+  }
+}

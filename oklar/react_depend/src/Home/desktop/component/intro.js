@@ -2,9 +2,9 @@ import React from "react";
 import { ReactDOM } from "react-dom/client";
 import { Nav } from "./Navbar";
 import { useMediaQuery } from "react-responsive";
-import Brand1 from "../../css/img/oklarpng.png";
-import Brand2 from "../../css/img/oklarpng2.png";
-import Room from "../../css/img/room.jpg";
+import Brand1 from "../../../css/img/oklarpng.png";
+import Brand2 from "../../../css/img/oklarpng2.png";
+import Room from "../../../css/img/room.jpg";
 export const Intro = () => {
   const isLarge = useMediaQuery({ minWidth: 1180 });
   return (
