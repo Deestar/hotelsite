@@ -9,6 +9,10 @@ import { useContext } from "react";
 import { Setcurrent } from "../../../context";
 export const Intro = () => {
   const changeCurrent = useContext(Setcurrent);
+  const toRoom = () => {
+    changeCurrent("ROOMS");
+  };
+  //THIS IS TO LET NAVIGATION CHANGE STAE OF SHOWUSER IN INDEX PAGE
   const changeScreen = (event) => {
     const { textContent } = event.target;
     changeCurrent(textContent);
@@ -43,7 +47,7 @@ export const Intro = () => {
               Enjoy our top notch services during your holidays, buisness trips
               and couple time
             </h5>
-            <a href="../../../room.html">
+            <a onClick={toRoom}>
               <h4>BOOK ROOM &rarr;</h4>
             </a>
           </div>

@@ -8,12 +8,13 @@ import { Setcurrent } from "./context";
 const App = () => {
   const [showUser, setShowUser] = useState([
     {
-      HOME: false,
-      ROOMS: true,
+      HOME: true,
+      ROOMS: false,
       POPULAR: false,
       LOUNGE: false,
     },
   ]);
+  // THIS SETS THE HOME COMPONENT FROM ERROR PAGE
   const handleError = () => {
     setShowUser([
       {

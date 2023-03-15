@@ -1,6 +1,12 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
+import { useContext } from "react";
+import { Setcurrent } from "../../../context";
 export const Discount = (prop) => {
+  const showUser = useContext(Setcurrent);
+  const toPopular = () => {
+    showUser("POPULAR");
+  };
   return (
     <div
       ref={prop.d ? prop.specials_ref : null}
@@ -25,7 +31,7 @@ export const Discount = (prop) => {
             We offer special offers for our Royal customers with cut offs that
             saves your money while you enjoy more time with us
           </h6>
-          <button>Special Offers &rarr;</button>
+          <button onClick={toPopular}>Special Offers &rarr;</button>
           {
             //  prettier-ignore
             !prop.d && <div className={prop.d ? "desk_d_price" : "d_price"}>

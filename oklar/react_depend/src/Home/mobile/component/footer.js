@@ -1,7 +1,13 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
 import Boque from "../../../css/img/bouque.png";
+import { Setcurrent } from "../../../context";
+import { useContext } from "react";
 export const Foot = (prop) => {
+  const showUser = useContext(Setcurrent);
+  const toRoom = () => {
+    showUser("ROOMS");
+  };
   return (
     <footer>
       <div className={prop.d ? "desk_img_text" : "img_text"}>
@@ -13,7 +19,7 @@ export const Foot = (prop) => {
           <div></div>
           <h6>07011111111</h6>
         </div>
-        <a href="">BOOK &rarr;</a>
+        <a onClick={toRoom}>BOOK &rarr;</a>
       </div>
     </footer>
   );

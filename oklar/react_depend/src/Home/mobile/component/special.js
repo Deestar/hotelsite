@@ -2,7 +2,13 @@ import React, { useCallback } from "react";
 import { ReactDOM } from "react-dom/client";
 import { Popular } from "./popular";
 import { rooms } from "./roomarray";
+import { useContext } from "react";
+import { Setcurrent } from "../../../context";
 export const Special = (prop) => {
+  const showUser = useContext(Setcurrent);
+  const toPopular = () => {
+    showUser("POPULAR");
+  };
   const TopRooms = rooms.map((ele, i) => (
     <Popular
       d={prop.d}
@@ -19,7 +25,7 @@ export const Special = (prop) => {
         <div>
           <h2>POPULAR</h2> <b>TOP ROOMS </b>
         </div>
-        <button>Top Rooms &rarr;</button>
+        <button onClick={toPopular}>Top Rooms &rarr;</button>
       </div>
       <div className={prop.d ? "desk_slideshow_cont" : "slideshow_cont"}>
         {TopRooms}

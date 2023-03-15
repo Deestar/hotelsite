@@ -742,6 +742,7 @@ footer {
   font-family: var(--h);
 }
 .desk_intro section .b a {
+  cursor: pointer;
   text-decoration: none;
   color: white;
   font-size: clamp(13px, 1.6vw, 16px);

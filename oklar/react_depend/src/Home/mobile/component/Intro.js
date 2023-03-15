@@ -1,7 +1,12 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
-
+import { Setcurrent } from "../../../context";
+import { useContext } from "react";
 export let Intro = (prop) => {
+  const showUser = useContext(Setcurrent);
+  const toRoom = () => {
+    showUser("ROOMS");
+  };
   return (
     <div className="intro_cont">
       <div className="toggler" onClick={prop.handlemenu}>
@@ -18,7 +23,7 @@ export let Intro = (prop) => {
           Enjoy our top notch service during your holidays, buisness trips and
           couple time
         </h4>
-        <a href="../../../room.html">
+        <a onClick={toRoom}>
           OUR ROOMS <span> &rarr; </span>
         </a>
       </div>
