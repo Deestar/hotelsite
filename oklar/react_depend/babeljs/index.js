@@ -1,10 +1,422 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/desktop/Main.js":
-/*!*****************************!*\
-  !*** ./src/desktop/Main.js ***!
-  \*****************************/
+/***/ "./src/Bookroom/Book.js":
+/*!******************************!*\
+  !*** ./src/Bookroom/Book.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RoomBook": () => (/* binding */ RoomBook)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _mobile_mobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mobile/mobile */ "./src/Bookroom/mobile/mobile.js");
+/* harmony import */ var _desktop_desktop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./desktop/desktop */ "./src/Bookroom/desktop/desktop.js");
+
+
+
+
+
+var RoomBook = function RoomBook() {
+  var isMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)({
+    maxWidth: 800
+  });
+  return isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_mobile__WEBPACK_IMPORTED_MODULE_2__.Mobile, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_desktop_desktop__WEBPACK_IMPORTED_MODULE_3__.Desktop, null);
+};
+
+/***/ }),
+
+/***/ "./src/Bookroom/desktop/component/loader.js":
+/*!**************************************************!*\
+  !*** ./src/Bookroom/desktop/component/loader.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pree"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pre_circ1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pre_circ2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pre_circ3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pre_circ4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Loading...please wait"));
+});
+
+/***/ }),
+
+/***/ "./src/Bookroom/desktop/component/rightview.js":
+/*!*****************************************************!*\
+  !*** ./src/Bookroom/desktop/component/rightview.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Rightview": () => (/* binding */ Rightview)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_img_left_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/left.png */ "./src/css/img/left.png");
+/* harmony import */ var _css_img_right_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/right.png */ "./src/css/img/right.png");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Rightview = function Rightview(_ref) {
+  var imgArray = _ref.imgArray;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    imgsrc = _useState2[0],
+    setImgSrc = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState4 = _slicedToArray(_useState3, 2),
+    imgno = _useState4[0],
+    setImgNo = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState6 = _slicedToArray(_useState5, 2),
+    currentTypeName = _useState6[0],
+    setCurrentTypeName = _useState6[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var currentType = imgArray.find(function (imgtypes) {
+      return imgtypes.set === true;
+    });
+    setImgSrc(currentType.images[imgno]);
+    setCurrentTypeName(currentType.name);
+    if (currentType.name === "ROYAL" || currentType.name === "EXIQUITE") {
+      if (imgno > 1) {
+        setImgNo(0);
+      } else if (imgno < 0) {
+        setImgNo(1);
+      }
+    } else {
+      if (imgno > 3) {
+        setImgNo(0);
+      } else if (imgno < 0) {
+        setImgNo(3);
+      }
+    }
+  }, [imgArray, imgno]);
+  //Function to increase the index num of img
+  var incrNo = function incrNo() {
+    setImgNo(function (prev) {
+      return prev + 1;
+    });
+  };
+  var decrNo = function decrNo() {
+    setImgNo(function (prev) {
+      return prev - 1;
+    });
+  };
+  var getPrice = function getPrice() {
+    var price;
+    var descript;
+    if (currentTypeName === "EXIQUITE") {
+      price = "10,000";
+      descript = "A description for EXIQUITE ROOMS";
+    } else if (currentTypeName === "STANDARD") {
+      price = "8,000";
+      descript = "A description for STANDARD ROOMS";
+    } else if (currentTypeName === "REGULAR") {
+      price = "7,000";
+      descript = "A description for REGULAR ROOMS";
+    } else {
+      price = "12,000";
+      descript = "A description for ROYAL ROOMS";
+    }
+    return price;
+  };
+  var getDescription = function getDescription() {
+    var descript;
+    if (currentTypeName === "EXIQUITE") {
+      descript = "A description for EXIQUITE ROOMS";
+    } else if (currentTypeName === "STANDARD") {
+      descript = "A description for STANDARD ROOMS";
+    } else if (currentTypeName === "REGULAR") {
+      descript = "A description for REGULAR ROOMS";
+    } else {
+      descript = "A description for ROYAL ROOMS";
+    }
+    return descript;
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "right_side_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "right_img_cont"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: imgsrc
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "direct"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "left",
+    onClick: decrNo,
+    src: _css_img_left_png__WEBPACK_IMPORTED_MODULE_1__
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "right",
+    onClick: incrNo,
+    src: _css_img_right_png__WEBPACK_IMPORTED_MODULE_2__
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "right_descr"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, getDescription()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A6", getPrice(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "right_price"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "btn_book"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "BOOK NOW"))));
+};
+
+/***/ }),
+
+/***/ "./src/Bookroom/desktop/component/room.js":
+/*!************************************************!*\
+  !*** ./src/Bookroom/desktop/component/room.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RoomSection": () => (/* binding */ RoomSection)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var RoomSection = function RoomSection(prop) {
+  var main = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var royal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var exiquite = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var standard = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var regular = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var scrollToType = function scrollToType(event) {
+    event.preventDefault();
+    var textContent = event.target.textContent;
+    prop.setType(textContent);
+    if (textContent === "ROYAL") {
+      main.current.scrollLeft = royal.current.offsetLeft - 258;
+    } else if (textContent === "EXIQUITE") {
+      main.current.scrollLeft = exiquite.current.offsetLeft - 258;
+    } else if (textContent === "REGULAR") {
+      main.current.scrollLeft = regular.current.offsetLeft - 258;
+    } else if (textContent === "STANDARD") {
+      main.current.scrollLeft = standard.current.offsetLeft - 258;
+    }
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "mid_side_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "header_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "AVAILBLE ROOMS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "hotel_type_cont_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#royal_desktop",
+    className: "hotel_type_desktop",
+    onClick: scrollToType
+  }, "ROYAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#exiquite_desktop",
+    className: "hotel_type_desktop",
+    onClick: scrollToType
+  }, "EXIQUITE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#standard_desktop",
+    className: "hotel_type_desktop",
+    onClick: scrollToType
+  }, "STANDARD"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#regular_desktop",
+    className: "hotel_type_desktop",
+    onClick: scrollToType
+  }, "REGULAR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: main,
+    className: "main_rooms_cont_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: royal,
+    className: "rooms_type_cont_desktop",
+    id: "royal_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_royal_1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A612,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_royal_2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A612,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_type_cont_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop",
+    ref: exiquite
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_exiquite_1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A610,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_exiquite_2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A610,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: standard,
+    className: "rooms_type_cont_desktop",
+    id: "standard_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_standard_1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A68,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_standard_2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A68,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_standard_3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A68,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_standard_4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A68,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_type_cont_desktop",
+    id: "regular_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: regular,
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_regular_1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A67,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_regular_2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A67,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_regular_3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A67,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "rooms_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "img_desktop img_regular_4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "decr_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A67,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "",
+    className: "restaurant_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "dish_img"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "shadow"
+  }, "WE SERVE DELICIOUS DELICACIES CLICK HERE TO ORDER")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "drink_img"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "shadow"
+  }, "ORDER NOW!!!"))));
+};
+
+/***/ }),
+
+/***/ "./src/Bookroom/desktop/component/sidemenu.js":
+/*!****************************************************!*\
+  !*** ./src/Bookroom/desktop/component/sidemenu.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/oklarpng3.png */ "./src/css/img/oklarpng3.png");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  var changeScreen = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_2__.Setcurrent);
+  var changeCurrent = function changeCurrent(event) {
+    event.preventDefault();
+    var textContent = event.target.textContent;
+    changeScreen(textContent);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "left_side_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "hotel_name_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "menu_bar_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    onClick: changeCurrent
+  }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    onClick: changeCurrent
+  }, "ROOMS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    onClick: changeCurrent
+  }, "POPULAR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    onClick: changeCurrent
+  }, "CONTACT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    onClick: changeCurrent
+  }, "LOUNGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "discount"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "GET UP TO", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    style: {
+      color: "red",
+      fontWeight: "800",
+      fontSize: "25px",
+      marginLeft: "2px"
+    }
+  }, "30%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "Check out our Top offers", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "up to 30% on room price")));
+});
+
+/***/ }),
+
+/***/ "./src/Bookroom/desktop/desktop.js":
+/*!*****************************************!*\
+  !*** ./src/Bookroom/desktop/desktop.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15,13 +427,122 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _component_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/intro */ "./src/desktop/component/intro.js");
-/* harmony import */ var _component_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/service */ "./src/desktop/component/service.js");
-/* harmony import */ var _component_other__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/other */ "./src/desktop/component/other.js");
-/* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/mobile/component/discount.js");
-/* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile/component/special */ "./src/mobile/component/special.js");
-/* harmony import */ var _mobile_component_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../mobile/component/footer */ "./src/mobile/component/footer.js");
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _css_desktopbook_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/desktopbook.css */ "./src/css/desktopbook.css");
+/* harmony import */ var _component_loader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/loader */ "./src/Bookroom/desktop/component/loader.js");
+/* harmony import */ var _component_sidemenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/sidemenu */ "./src/Bookroom/desktop/component/sidemenu.js");
+/* harmony import */ var _component_room__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/room */ "./src/Bookroom/desktop/component/room.js");
+/* harmony import */ var _component_rightview__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/rightview */ "./src/Bookroom/desktop/component/rightview.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+var Desktop = function Desktop() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+      name: "ROYAL",
+      set: true,
+      images: ["./img/room1.jpg", "./img/room2.jpg"]
+    }, {
+      name: "EXIQUITE",
+      set: false,
+      images: ["./img/room3.jpg", "./img/room4.jpg"]
+    }, {
+      name: "STANDARD",
+      set: false,
+      images: ["./img/room5.jpg", "./img/room6.jpeg", "./img/room7.png", "./img/room8.jpeg"]
+    }, {
+      name: "REGULAR",
+      set: false,
+      images: ["./img/room9.png", "./img/room10.jpeg", "./img/room11.png", "./img/room12.jpeg"]
+    }]),
+    _useState2 = _slicedToArray(_useState, 2),
+    type = _useState2[0],
+    setType = _useState2[1];
+  // Fuction to set the "set" value to of type state to true
+  var setImage = function setImage(imgtype) {
+    setType(function (prev) {
+      return prev.map(function (roomtype) {
+        return roomtype.name === imgtype ? _objectSpread(_objectSpread({}, roomtype), {}, {
+          set: true
+        }) : _objectSpread(_objectSpread({}, roomtype), {}, {
+          set: false
+        });
+      });
+    });
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "main_cont_desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_sidemenu__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_room__WEBPACK_IMPORTED_MODULE_5__.RoomSection, {
+    setType: setImage
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_rightview__WEBPACK_IMPORTED_MODULE_6__.Rightview, {
+    imgArray: type
+  })));
+};
+
+/***/ }),
+
+/***/ "./src/Bookroom/mobile/mobile.js":
+/*!***************************************!*\
+  !*** ./src/Bookroom/mobile/mobile.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Mobile": () => (/* binding */ Mobile)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+
+
+var Mobile = function Mobile() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: {
+      fontSize: "25px"
+    }
+  }, "I AM CURRENTLY WORKING ON THE MOBILE DESIGN KINDLY CHECK BACK LATER");
+};
+
+/***/ }),
+
+/***/ "./src/Home/desktop/Main.js":
+/*!**********************************!*\
+  !*** ./src/Home/desktop/Main.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Desktop": () => (/* binding */ Desktop)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _component_intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/intro */ "./src/Home/desktop/component/intro.js");
+/* harmony import */ var _component_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/service */ "./src/Home/desktop/component/service.js");
+/* harmony import */ var _component_other__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/other */ "./src/Home/desktop/component/other.js");
+/* harmony import */ var _mobile_component_discount__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../mobile/component/discount */ "./src/Home/mobile/component/discount.js");
+/* harmony import */ var _mobile_component_special__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../mobile/component/special */ "./src/Home/mobile/component/special.js");
+/* harmony import */ var _mobile_component_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../mobile/component/footer */ "./src/Home/mobile/component/footer.js");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../css/index.css */ "./src/css/index.css");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -103,10 +624,10 @@ var Desktop = function Desktop() {
 
 /***/ }),
 
-/***/ "./src/desktop/component/Navbar.js":
-/*!*****************************************!*\
-  !*** ./src/desktop/component/Navbar.js ***!
-  \*****************************************/
+/***/ "./src/Home/desktop/component/Navbar.js":
+/*!**********************************************!*\
+  !*** ./src/Home/desktop/component/Navbar.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -130,10 +651,10 @@ var Nav = function Nav(prop) {
 
 /***/ }),
 
-/***/ "./src/desktop/component/intro.js":
-/*!****************************************!*\
-  !*** ./src/desktop/component/intro.js ***!
-  \****************************************/
+/***/ "./src/Home/desktop/component/intro.js":
+/*!*********************************************!*\
+  !*** ./src/Home/desktop/component/intro.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -144,12 +665,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/desktop/component/Navbar.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
-/* harmony import */ var _css_img_oklarpng2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../css/img/oklarpng2.png */ "./src/css/img/oklarpng2.png");
-/* harmony import */ var _css_img_room_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../css/img/room.jpg */ "./src/css/img/room.jpg");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/Home/desktop/component/Navbar.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
+/* harmony import */ var _css_img_oklarpng2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/img/oklarpng2.png */ "./src/css/img/oklarpng2.png");
+/* harmony import */ var _css_img_room_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../css/img/room.jpg */ "./src/css/img/room.jpg");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 
@@ -158,14 +682,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Intro = function Intro() {
-  var isLarge = (0,react_responsive__WEBPACK_IMPORTED_MODULE_6__.useMediaQuery)({
+  var changeCurrent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_6__.Setcurrent);
+  var toRoom = function toRoom() {
+    changeCurrent("ROOMS");
+  };
+  //THIS IS TO LET NAVIGATION CHANGE STAE OF SHOWUSER IN INDEX PAGE
+  var changeScreen = function changeScreen(event) {
+    var textContent = event.target.textContent;
+    changeCurrent(textContent);
+  };
+  var isLarge = (0,react_responsive__WEBPACK_IMPORTED_MODULE_7__.useMediaQuery)({
     minWidth: 1180
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desk_intro_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__.Nav, {
     brand: isLarge ? _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_3__ : _css_img_oklarpng2_png__WEBPACK_IMPORTED_MODULE_4__,
-    list: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ROOMS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "POPULAR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "LOUNGE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "CONTACT"))
+    list: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      onClick: changeScreen
+    }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      onClick: changeScreen
+    }, "ROOMS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      onClick: changeScreen
+    }, "POPULAR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      onClick: changeScreen
+    }, "CONTACT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      onClick: changeScreen
+    }, "LOUNGE"))
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desk_intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
@@ -175,7 +718,7 @@ var Intro = function Intro() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "NIGERIAN."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "ROYALTY."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "COMFORT.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "i b"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "BOOK A ROOM TODAY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "Enjoy our top notch services during your holidays, buisness trips and couple time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "../../../room.html"
+    onClick: toRoom
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "BOOK ROOM \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "i s"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ROOM SERVICE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ELECTRICITY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "AFRICAN & INT'L DISH"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "CLOSED & OPEN BAR")))));
@@ -183,10 +726,10 @@ var Intro = function Intro() {
 
 /***/ }),
 
-/***/ "./src/desktop/component/other.js":
-/*!****************************************!*\
-  !*** ./src/desktop/component/other.js ***!
-  \****************************************/
+/***/ "./src/Home/desktop/component/other.js":
+/*!*********************************************!*\
+  !*** ./src/Home/desktop/component/other.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -197,28 +740,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 var Other = function Other(prop) {
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_2__.Setcurrent);
+  var toPopular = function toPopular() {
+    showUser("POPULAR");
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desk_other",
     "data-name": "special",
     ref: prop.special_ref
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: prop.isanimated.special ? "popular shaky" : "popular"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "SPECIAL OFFERS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Get more value for your money with our special rooms, tailoured to meet your unique needs and preferences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "SPECIAL OFFERS \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "SPECIAL OFFERS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Get more value for your money with our special rooms, tailoured to meet your unique needs and preferences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: toPopular,
+    style: {
+      cursor: "pointer"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "SPECIAL OFFERS \u2192"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: prop.isanimated.special ? "location shaka" : "location"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "OUR LOCATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Our hotel is located at Egbeda, A top spot on Lagos Mainland, one of the city's main roads"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: ""
+    href: "https://www.google.com/maps/dir//Okla+Royal+Suite,+Egbeda,+1+-+3+Adenrele+St,+Lagos/@6.5949623,3.2729157,14.33z/data=!4m8!4m7!1m0!1m5!1m1!1s0x103b904e76f9b587:0xf74461f488aa9919!2m2!1d3.2937372!2d6.5970052"
   }, "LOCATE US \u2192")));
 };
 
 /***/ }),
 
-/***/ "./src/desktop/component/service.js":
-/*!******************************************!*\
-  !*** ./src/desktop/component/service.js ***!
-  \******************************************/
+/***/ "./src/Home/desktop/component/service.js":
+/*!***********************************************!*\
+  !*** ./src/Home/desktop/component/service.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -228,7 +783,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_img_beach1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css/img/beach1.jpg */ "./src/css/img/beach1.jpg");
+/* harmony import */ var _css_img_beach1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/beach1.jpg */ "./src/css/img/beach1.jpg");
 
 
 
@@ -255,10 +810,42 @@ var Service = function Service(prop) {
 
 /***/ }),
 
-/***/ "./src/mobile/Main.js":
-/*!****************************!*\
-  !*** ./src/mobile/Main.js ***!
-  \****************************/
+/***/ "./src/Home/home.js":
+/*!**************************!*\
+  !*** ./src/Home/home.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Home": () => (/* binding */ Home)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _mobile_Main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mobile/Main */ "./src/Home/mobile/Main.js");
+/* harmony import */ var _desktop_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./desktop/Main */ "./src/Home/desktop/Main.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+var Home = function Home() {
+  var isMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)({
+    maxWidth: 540
+  });
+  return isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_Main__WEBPACK_IMPORTED_MODULE_2__.Mobile, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_desktop_Main__WEBPACK_IMPORTED_MODULE_3__.Desktop, null);
+};
+
+/***/ }),
+
+/***/ "./src/Home/mobile/Main.js":
+/*!*********************************!*\
+  !*** ./src/Home/mobile/Main.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -269,13 +856,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _component_Intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/Intro */ "./src/mobile/component/Intro.js");
-/* harmony import */ var _component_discount__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/discount */ "./src/mobile/component/discount.js");
-/* harmony import */ var _component_option__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/option */ "./src/mobile/component/option.js");
-/* harmony import */ var _component_special__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/special */ "./src/mobile/component/special.js");
-/* harmony import */ var _component_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/footer */ "./src/mobile/component/footer.js");
-/* harmony import */ var _component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./component/Sidemenu */ "./src/mobile/component/Sidemenu.js");
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _component_Intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/Intro */ "./src/Home/mobile/component/Intro.js");
+/* harmony import */ var _component_discount__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/discount */ "./src/Home/mobile/component/discount.js");
+/* harmony import */ var _component_option__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/option */ "./src/Home/mobile/component/option.js");
+/* harmony import */ var _component_special__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/special */ "./src/Home/mobile/component/special.js");
+/* harmony import */ var _component_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/footer */ "./src/Home/mobile/component/footer.js");
+/* harmony import */ var _component_Sidemenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./component/Sidemenu */ "./src/Home/mobile/component/Sidemenu.js");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../css/index.css */ "./src/css/index.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -321,10 +908,10 @@ var Mobile = function Mobile() {
 
 /***/ }),
 
-/***/ "./src/mobile/component/Intro.js":
-/*!***************************************!*\
-  !*** ./src/mobile/component/Intro.js ***!
-  \***************************************/
+/***/ "./src/Home/mobile/component/Intro.js":
+/*!********************************************!*\
+  !*** ./src/Home/mobile/component/Intro.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -335,9 +922,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 var Intro = function Intro(prop) {
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_2__.Setcurrent);
+  var toRoom = function toRoom() {
+    showUser("ROOMS");
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "intro_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -350,16 +944,16 @@ var Intro = function Intro(prop) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "The Nigerian Royalty Comfort")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "intro-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "BOOK A ROOM TODAY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "Enjoy our top notch service during your holidays, buisness trips and couple time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "../../../room.html"
+    onClick: toRoom
   }, "OUR ROOMS ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, " \u2192 "))));
 };
 
 /***/ }),
 
-/***/ "./src/mobile/component/Sidemenu.js":
-/*!******************************************!*\
-  !*** ./src/mobile/component/Sidemenu.js ***!
-  \******************************************/
+/***/ "./src/Home/mobile/component/Sidemenu.js":
+/*!***********************************************!*\
+  !*** ./src/Home/mobile/component/Sidemenu.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -370,13 +964,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _css_img_home_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/img/home.png */ "./src/css/img/home.png");
-/* harmony import */ var _css_img_book_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../css/img/book.png */ "./src/css/img/book.png");
-/* harmony import */ var _css_img_restaurant_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../css/img/restaurant.png */ "./src/css/img/restaurant.png");
-/* harmony import */ var _css_img_popular_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../css/img/popular.png */ "./src/css/img/popular.png");
-/* harmony import */ var _css_img_contact_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../css/img/contact.png */ "./src/css/img/contact.png");
-/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
-/* harmony import */ var _css_img_cancel_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../css/img/cancel.png */ "./src/css/img/cancel.png");
+/* harmony import */ var _css_img_home_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/home.png */ "./src/css/img/home.png");
+/* harmony import */ var _css_img_book_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/img/book.png */ "./src/css/img/book.png");
+/* harmony import */ var _css_img_restaurant_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/img/restaurant.png */ "./src/css/img/restaurant.png");
+/* harmony import */ var _css_img_popular_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../css/img/popular.png */ "./src/css/img/popular.png");
+/* harmony import */ var _css_img_contact_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../css/img/contact.png */ "./src/css/img/contact.png");
+/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
+/* harmony import */ var _css_img_cancel_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../css/img/cancel.png */ "./src/css/img/cancel.png");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 
@@ -387,8 +984,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SideMenu = function SideMenu(prop) {
-  var goRoom = function goRoom() {
-    location.assign("../../../room.html");
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_9__.Setcurrent);
+  var setDisplay = function setDisplay(event) {
+    var childNodes = event.target.childNodes;
+    var no = childNodes.length - 1;
+    showUser(childNodes[no].textContent);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.menu ? "sidemenu_cont unhide" : "sidemenu_cont closeup"
@@ -399,19 +999,27 @@ var SideMenu = function SideMenu(prop) {
     src: _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_7__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     id: prop.menu ? "text-show" : "text-hide"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    onClick: setDisplay
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _css_img_home_png__WEBPACK_IMPORTED_MODULE_2__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "HOME")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    onClick: goRoom
+    onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _css_img_book_png__WEBPACK_IMPORTED_MODULE_3__
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "ROOMS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "ROOMS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    onClick: setDisplay
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _css_img_restaurant_png__WEBPACK_IMPORTED_MODULE_4__
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "RESTAURANT")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "POPULAR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    onClick: setDisplay
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _css_img_popular_png__WEBPACK_IMPORTED_MODULE_5__
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "POPULAR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "LOUNGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    onClick: setDisplay
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _css_img_contact_png__WEBPACK_IMPORTED_MODULE_6__
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "MAP / CONTACT")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "CONTACT")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     onClick: prop.handlemenu,
     src: _css_img_cancel_png__WEBPACK_IMPORTED_MODULE_8__,
     className: prop.menu ? "close" : "hide"
@@ -420,10 +1028,10 @@ var SideMenu = function SideMenu(prop) {
 
 /***/ }),
 
-/***/ "./src/mobile/component/discount.js":
-/*!******************************************!*\
-  !*** ./src/mobile/component/discount.js ***!
-  \******************************************/
+/***/ "./src/Home/mobile/component/discount.js":
+/*!***********************************************!*\
+  !*** ./src/Home/mobile/component/discount.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -434,16 +1042,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 var Discount = function Discount(prop) {
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_2__.Setcurrent);
+  var toPopular = function toPopular() {
+    showUser("POPULAR");
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     ref: prop.d ? prop.specials_ref : null,
-    className: prop.d ? "desk_discount" : "discount",
+    className: prop.d ? "desk_discount" : "home_discount",
     "data-name": "specials"
   }, (prop.isanimated ? prop.isanimated.specials : true) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: prop.d ? "desk_discount_text" : "discount_text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ROYAL PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Special Offers \u2192"),
+    className: prop.d ? "desk_discount_text" : "home_discount_text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", null, "SPECIALS"), prop.d ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "STAY LONG SAVE MORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "WITH OUR ROYAL PLANS")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "STAY LONG, SAVE MORE ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "WITH OUR ROYAL PLANS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "We offer special offers for our Royal customers with cut offs that saves your money while you enjoy more time with us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: toPopular
+  }, "Special Offers \u2192"),
   //  prettier-ignore
   !prop.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_d_price" : "d_price"
@@ -452,16 +1069,16 @@ var Discount = function Discount(prop) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "10,000", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u20A6")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "per day")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "p_info"
   }, "A 10% discount for Royal rooms"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: prop.d ? "desk_discount_img" : "discount_img"
+    className: prop.d ? "desk_discount_img" : "home_discount_img"
   }));
 };
 
 /***/ }),
 
-/***/ "./src/mobile/component/footer.js":
-/*!****************************************!*\
-  !*** ./src/mobile/component/footer.js ***!
-  \****************************************/
+/***/ "./src/Home/mobile/component/footer.js":
+/*!*********************************************!*\
+  !*** ./src/Home/mobile/component/footer.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -472,11 +1089,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _css_img_bouque_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/img/bouque.png */ "./src/css/img/bouque.png");
+/* harmony import */ var _css_img_bouque_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/bouque.png */ "./src/css/img/bouque.png");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 
 var Foot = function Foot(prop) {
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_3__.Setcurrent);
+  var toRoom = function toRoom() {
+    showUser("ROOMS");
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_img_text" : "img_text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
@@ -486,16 +1110,16 @@ var Foot = function Foot(prop) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_num" : "num"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", null, "07011111111")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: ""
+    onClick: toRoom
   }, "BOOK \u2192")));
 };
 
 /***/ }),
 
-/***/ "./src/mobile/component/option.js":
-/*!****************************************!*\
-  !*** ./src/mobile/component/option.js ***!
-  \****************************************/
+/***/ "./src/Home/mobile/component/option.js":
+/*!*********************************************!*\
+  !*** ./src/Home/mobile/component/option.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -566,10 +1190,10 @@ var Option = function Option() {
 
 /***/ }),
 
-/***/ "./src/mobile/component/popular.js":
-/*!*****************************************!*\
-  !*** ./src/mobile/component/popular.js ***!
-  \*****************************************/
+/***/ "./src/Home/mobile/component/popular.js":
+/*!**********************************************!*\
+  !*** ./src/Home/mobile/component/popular.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -597,10 +1221,10 @@ var Popular = function Popular(_ref) {
 
 /***/ }),
 
-/***/ "./src/mobile/component/roomarray.js":
-/*!*******************************************!*\
-  !*** ./src/mobile/component/roomarray.js ***!
-  \*******************************************/
+/***/ "./src/Home/mobile/component/roomarray.js":
+/*!************************************************!*\
+  !*** ./src/Home/mobile/component/roomarray.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -632,10 +1256,10 @@ var rooms = [{
 
 /***/ }),
 
-/***/ "./src/mobile/component/special.js":
-/*!*****************************************!*\
-  !*** ./src/mobile/component/special.js ***!
-  \*****************************************/
+/***/ "./src/Home/mobile/component/special.js":
+/*!**********************************************!*\
+  !*** ./src/Home/mobile/component/special.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -646,13 +1270,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _popular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./popular */ "./src/mobile/component/popular.js");
-/* harmony import */ var _roomarray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./roomarray */ "./src/mobile/component/roomarray.js");
+/* harmony import */ var _popular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./popular */ "./src/Home/mobile/component/popular.js");
+/* harmony import */ var _roomarray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./roomarray */ "./src/Home/mobile/component/roomarray.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+
+
 
 
 
 
 var Special = function Special(prop) {
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_4__.Setcurrent);
+  var toPopular = function toPopular() {
+    showUser("POPULAR");
+  };
   var TopRooms = _roomarray__WEBPACK_IMPORTED_MODULE_3__.rooms.map(function (ele, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_popular__WEBPACK_IMPORTED_MODULE_2__.Popular, {
       d: prop.d,
@@ -667,10 +1298,98 @@ var Special = function Special(prop) {
     className: prop.d ? "desk_special" : "special"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_s_title" : "s_title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "POPULAR"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "TOP ROOMS ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Top Rooms \u2192")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "POPULAR"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, "TOP ROOMS ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: toPopular
+  }, "Top Rooms \u2192")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_slideshow_cont" : "slideshow_cont"
   }, TopRooms));
 };
+
+/***/ }),
+
+/***/ "./src/context.js":
+/*!************************!*\
+  !*** ./src/context.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Setcurrent": () => (/* binding */ Setcurrent)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var Setcurrent = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/css/desktopbook.css":
+/*!***********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/css/desktopbook.css ***!
+  \***********************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
+// Imports
+
+
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./img/img2.jpg */ "./src/css/img/img2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room1.jpg */ "./src/css/img/room1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room2.jpg */ "./src/css/img/room2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room3.jpg */ "./src/css/img/room3.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room4.jpg */ "./src/css/img/room4.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room5.jpg */ "./src/css/img/room5.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room6.jpeg */ "./src/css/img/room6.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room7.png */ "./src/css/img/room7.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room8.jpeg */ "./src/css/img/room8.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room9.png */ "./src/css/img/room9.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room10.jpeg */ "./src/css/img/room10.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room11.png */ "./src/css/img/room11.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room12.jpeg */ "./src/css/img/room12.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish1.jpg */ "./src/css/img/dish1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish2.jpeg */ "./src/css/img/dish2.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish3.jpg */ "./src/css/img/dish3.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink1.jpg */ "./src/css/img/drink1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink2.jpg */ "./src/css/img/drink2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink3.jpg */ "./src/css/img/drink3.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_18___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/* @import url(\"https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap\"); */\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  height: 100vh;\r\n  background-color: var(--darkwhite);\r\n  background-attachment: fixed;\r\n}\r\n\r\n:root {\r\n  --darkwhite: rgba(235, 231, 231, 0.923);\r\n}\r\n/* PRELOADED DIV */\r\n.pree {\r\n  height: 100vh;\r\n  width: 100vw;\r\n  position: absolute;\r\n\r\n  background-color: rgb(104, 103, 103);\r\n  z-index: 999;\r\n  display: grid;\r\n  place-content: center;\r\n  top: 0;\r\n  font-family: helvetica;\r\n  box-sizing: border-box;\r\n  overflow: hidden;\r\n  grid-template-areas:\r\n    \"aa bb cc dd\"\r\n    \" ee ee ee ee \";\r\n}\r\n.pree b {\r\n  color: rgb(29, 27, 27);\r\n  white-space: nowrap;\r\n  letter-spacing: 2px;\r\n  animation: predisplay 1s steps(4, end) infinite alternate;\r\n  grid-area: ee;\r\n  margin-left: -60px;\r\n  font-size: 26px;\r\n}\r\n.pre_circ1 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(223, 61, 61, 0.767);\r\n  margin-bottom: 30px;\r\n  grid-area: aa;\r\n  margin-left: 10px;\r\n  animation: firstt 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ2 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(60, 173, 111, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -40px;\r\n  grid-area: bb;\r\n  animation: secondd 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ3 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(66, 120, 165, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -50px;\r\n  grid-area: cc;\r\n  animation: thirdd 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ4 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(168, 88, 155, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -60px;\r\n  grid-area: dd;\r\n  animation: fourth 1s steps(4, end) infinite alternate;\r\n}\r\n\r\n/* DESKTOP CSS CODES */\r\n.main_cont_desktop {\r\n  display: grid;\r\n  grid-template-columns: 25vw 50vw 25vw;\r\n  column-gap: 5px;\r\n  height: var(--height);\r\n  width: 100vw;\r\n}\r\n/* DESKTOP LEFT SIDE */\r\n.left_side_desktop {\r\n  background-color: rgba(255, 255, 255, 0.892);\r\n  height: 100vh;\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n  grid-template-rows: 12% 65% 22%;\r\n  row-gap: 1%;\r\n  width: 100%;\r\n  /* padding: 5px 0px; */\r\n}\r\n.hotel_name_desktop {\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n  display: grid;\r\n  align-items: center;\r\n  padding: 0px 2px;\r\n}\r\n.hotel_name_desktop img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 70%;\r\n  max-height: 100%;\r\n}\r\n.menu_bar_desktop {\r\n  display: grid;\r\n  padding-left: 1vw;\r\n  align-items: center;\r\n  /* border: var(--border3); */\r\n  max-width: 25vw;\r\n}\r\n.menu_bar_desktop a:nth-child(4) {\r\n  letter-spacing: normal;\r\n}\r\n\r\n.menu_bar_desktop a {\r\n  color: rgb(12, 9, 9);\r\n  /* border: var(--border2); */\r\n  background-color: var(--darkwhite);\r\n  white-space: nowrap;\r\n  padding: 10px;\r\n  letter-spacing: 3px;\r\n  font-size: clamp(15px, 1.5vw, 26px);\r\n  max-width: 23.5vw;\r\n  border-top-left-radius: 50px;\r\n  border-bottom-left-radius: 50px;\r\n  border-right: 2px solid rgb(26, 155, 235);\r\n}\r\n.menu_bar_desktop a:nth-child(2) {\r\n  color: rgb(25, 140, 211);\r\n  border-right: none;\r\n}\r\n.menu_bar_desktop a:hover {\r\n  color: rgb(25, 140, 211);\r\n  cursor: pointer;\r\n}\r\n.discount {\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: center;\r\n  font-family: sans-serif;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: top;\r\n  background-size: 150%;\r\n  background-repeat: no-repeat;\r\n  filter: opacity(0.8);\r\n  /* border: var(--border2); */\r\n}\r\n\r\n.discount b {\r\n  padding-left: 8px;\r\n}\r\n\r\n/* DESKTOP MIDDLE SIDE */\r\n.mid_side_desktop {\r\n  /* border: var(--border); */\r\n  display: grid;\r\n  grid-template-rows: 0.5fr 0.3fr 2.1fr 1.2fr;\r\n  gap: 15px;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n}\r\n.header_desktop {\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n\r\n  place-content: center;\r\n\r\n  max-width: 50vw;\r\n}\r\n.header_desktop h2 {\r\n  font-family: \"aladin\", Helvetica;\r\n  letter-spacing: 5px;\r\n  font-style: italic;\r\n  text-shadow: 1px 2px 2px rgb(25, 140, 211);\r\n}\r\n.header_desktop h2:hover {\r\n  text-shadow: 2px 1px 1px rgba(25, 140, 211, 0.589);\r\n}\r\n.hotel_type_cont_desktop {\r\n  display: flex;\r\n  gap: 30px;\r\n  align-items: center;\r\n  height: 70%;\r\n  justify-content: flex-start;\r\n  letter-spacing: 3px;\r\n  max-width: 50vw;\r\n  overflow-x: auto;\r\n  border-bottom: 2px solid rgba(39, 141, 204, 0.673);\r\n  border-top: 2px solid rgba(39, 141, 204, 0.673);\r\n  padding: 0px 5px;\r\n}\r\n::-webkit-scrollbar {\r\n  height: 100%;\r\n  width: 0px;\r\n}\r\n.hotel_type_cont_desktop a {\r\n  /* border: var(--border); */\r\n  padding: 5px;\r\n  color: rgb(12, 9, 9);\r\n  height: 80%;\r\n  background-color: rgba(194, 217, 231, 0.673);\r\n  display: grid;\r\n  place-content: center;\r\n  box-shadow: 2px 2px 0px 2px rgba(183, 204, 217, 0.603) inset,\r\n    -2px -2px 0px 2px rgba(183, 204, 217, 0.603) inset;\r\n  /* border: var(--border); */\r\n}\r\n\r\n.hotel_type_cont_desktop a:hover {\r\n  background-color: rgba(39, 141, 204, 0.673);\r\n}\r\n/* FOR THE ROOMS IN DESKTOP VIEW */\r\n.main_rooms_cont_desktop {\r\n  display: flex;\r\n  /* border: var(--border); */\r\n  overflow-x: auto;\r\n  scroll-snap-type: x mandatory;\r\n  padding-left: 10px;\r\n  gap: 10px;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\n/* THE DIV CONTAING THE CONTAINER FOR THE ROOMS */\r\n.rooms_type_cont_desktop {\r\n  display: flex;\r\n  gap: 19px;\r\n  /* border: var(--border2); */\r\n  min-width: 100%;\r\n  overflow-x: scroll;\r\n  flex-wrap: nowrap;\r\n  scroll-snap-align: end;\r\n  overflow-x: auto;\r\n  scroll-snap-type: x mandatory;\r\n}\r\n.rooms_type_cont_desktop:nth-child(1) {\r\n  padding-left: 20px;\r\n}\r\n\r\n/* THE DIV CONTAINER FOR ROOM IMAGES AND DESCRIPTIONS  */\r\n.rooms_desktop {\r\n  border: 3px solid rgba(183, 208, 224, 0.719);\r\n  min-width: clamp(320px, 80%, 450px);\r\n  scroll-snap-align: start;\r\n  background-color: white;\r\n  border-radius: 15px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.img_desktop {\r\n  border-radius: 10px;\r\n  margin: 15px;\r\n  margin-top: 8px;\r\n  height: 100%;\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n.img_royal_1 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n}\r\n.img_royal_2 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\r\n}\r\n.img_exiquite_1 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\r\n}\r\n.img_exiquite_2 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\r\n}\r\n.img_standard_1 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\r\n}\r\n.img_standard_2 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\r\n}\r\n.img_standard_3 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ");\r\n}\r\n.img_standard_4 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ");\r\n}\r\n.img_regular_1 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ");\r\n}\r\n.img_regular_2 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ");\r\n}\r\n.img_regular_3 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_11___ + ");\r\n}\r\n.img_regular_4 {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_12___ + ");\r\n}\r\n.decr_desktop {\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n  overflow: hidden;\r\n  font-family: var(--h);\r\n  box-sizing: border-box;\r\n  padding: 2px 10px;\r\n  place-content: center;\r\n  row-gap: 20px;\r\n  height: 60%;\r\n  min-height: fit-content;\r\n  color: rgb(37, 37, 37);\r\n}\r\n\r\n.decr_desktop b {\r\n  /* border: var(--border); */\r\n  font-size: clamp(18px, 2.4vw, 23px);\r\n}\r\n.decr_desktop h2 {\r\n  font-size: clamp(20px, 2.7vw, 25px);\r\n}\r\n.decr_desktop h2 span {\r\n  font-size: clamp(12px, 1.5vw, 15px);\r\n}\r\n/* FOOD AND DRINKS FROM RESTAURANT SLIDE SHOW */\r\n.restaurant_desktop {\r\n  display: grid;\r\n  grid-template-columns: 2fr 2fr;\r\n  gap: 10px;\r\n}\r\n.dish_img {\r\n  border-radius: 30px;\r\n  animation: food 25s ease infinite alternate-reverse;\r\n  filter: opacity(0.7);\r\n}\r\n.drink_img {\r\n  border-radius: 30px;\r\n  display: grid;\r\n  animation: drink 15s ease infinite alternate-reverse;\r\n\r\n  filter: opacity(0.7);\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  color: rgba(252, 198, 137, 0.977);\r\n}\r\n.shadow {\r\n  height: 100%;\r\n  background-color: rgba(26, 25, 25, 0.196);\r\n  z-index: 300;\r\n  font-size: 25px;\r\n  display: grid;\r\n  color: rgb(27, 24, 24);\r\n  font-family: helvetica;\r\n  place-content: center;\r\n  padding-left: 20px;\r\n}\r\n\r\n/* DESKTOP RIGHT SIDE */\r\n.right_side_desktop {\r\n  display: grid;\r\n  gap: 15px;\r\n  /* padding: 10px; */\r\n  grid-template-rows: 50% 32% 15%;\r\n  background-color: rgba(253, 252, 252, 0.973);\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n}\r\n.right_img_cont {\r\n  /* border: var(--border2); */\r\n  max-width: 25vw;\r\n  display: grid;\r\n  grid-template-rows: 92% 7%;\r\n  row-gap: 1%;\r\n}\r\n.right_img_cont > img {\r\n  /* border: var(--border3); */\r\n  width: 25vw;\r\n  max-width: 25vw;\r\n  height: 100%;\r\n  max-height: 100%;\r\n}\r\n.right_img_cont .direct {\r\n  /* border: var(--border); */\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  column-gap: 8px;\r\n}\r\n.right_img_cont img.left {\r\n  height: 30px;\r\n  animation: none;\r\n}\r\n.right_img_cont img.right {\r\n  height: 20px;\r\n  animation: none;\r\n}\r\n.right_descr {\r\n  font-size: clamp(20px, 2.9vw, 25px);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n  padding: 5px;\r\n  font-family: helvetica;\r\n  border-bottom: 8px solid rgb(11, 100, 178);\r\n  border-top: 8px solid rgb(11, 100, 178);\r\n}\r\n.right_price {\r\n  padding: 8px;\r\n  display: grid;\r\n  /* border: var(--border); */\r\n  place-content: center;\r\n}\r\n.right_price button {\r\n  max-width: 25vw;\r\n  background-color: rgb(11, 100, 178);\r\n  border: none;\r\n  border-radius: 20px;\r\n  padding: 15px 20px;\r\n  color: white;\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n}\r\n.right_price button:hover {\r\n  background-color: rgba(50, 104, 151, 0.74);\r\n}\r\n.right_descr h2 {\r\n  font-size: clamp(22px, 3.1vw, 27px);\r\n  /* border: var(--border); */\r\n}\r\n.right_descr h2 span {\r\n  font-size: clamp(14px, 1.6vw, 17px);\r\n}\r\n@keyframes food {\r\n  0% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_13___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  50% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_14___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  100% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_15___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n}\r\n\r\n@keyframes drink {\r\n  0% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_16___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  50% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_17___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  100% {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_18___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n}\r\n@keyframes predisplay {\r\n  0% {\r\n    color: rgba(10, 4, 4, 0.829);\r\n  }\r\n  25% {\r\n    color: rgba(43, 30, 30, 0.63);\r\n  }\r\n  50% {\r\n    color: rgba(70, 63, 63, 0.555);\r\n  }\r\n  75% {\r\n    color: rgba(105, 92, 92, 0.342);\r\n  }\r\n  100% {\r\n    color: rgba(126, 117, 117, 0);\r\n  }\r\n}\r\n@keyframes firstt {\r\n  from {\r\n    background-color: rgba(223, 61, 61, 0.767);\r\n  }\r\n  to {\r\n    background-color: rgba(168, 88, 155, 0.733);\r\n  }\r\n}\r\n@keyframes secondd {\r\n  from {\r\n    background-color: rgba(60, 173, 111, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(223, 61, 61, 0.767);\r\n  }\r\n}\r\n@keyframes thirdd {\r\n  from {\r\n    background-color: rgba(66, 120, 165, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(60, 173, 111, 0.733);\r\n  }\r\n}\r\n@keyframes fourth {\r\n  from {\r\n    background-color: rgba(168, 88, 155, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(66, 120, 165, 0.733);\r\n  }\r\n}\r\n@media (min-width: 1067px) {\r\n  .hotel_type_cont_desktop {\r\n    justify-content: center;\r\n  }\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/desktopbook.css"],"names":[],"mappings":"AAAA,wFAAwF;AACxF;EACE,SAAS;EACT,UAAU;EACV,qBAAqB;EACrB,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,kCAAkC;EAClC,4BAA4B;AAC9B;;AAEA;EACE,uCAAuC;AACzC;AACA,kBAAkB;AAClB;EACE,aAAa;EACb,YAAY;EACZ,kBAAkB;;EAElB,oCAAoC;EACpC,YAAY;EACZ,aAAa;EACb,qBAAqB;EACrB,MAAM;EACN,sBAAsB;EACtB,sBAAsB;EACtB,gBAAgB;EAChB;;mBAEiB;AACnB;AACA;EACE,sBAAsB;EACtB,mBAAmB;EACnB,mBAAmB;EACnB,yDAAyD;EACzD,aAAa;EACb,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,0CAA0C;EAC1C,mBAAmB;EACnB,aAAa;EACb,iBAAiB;EACjB,qDAAqD;AACvD;AACA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,2CAA2C;EAC3C,mBAAmB;EACnB,kBAAkB;EAClB,aAAa;EACb,sDAAsD;AACxD;AACA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,2CAA2C;EAC3C,mBAAmB;EACnB,kBAAkB;EAClB,aAAa;EACb,qDAAqD;AACvD;AACA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,2CAA2C;EAC3C,mBAAmB;EACnB,kBAAkB;EAClB,aAAa;EACb,qDAAqD;AACvD;;AAEA,sBAAsB;AACtB;EACE,aAAa;EACb,qCAAqC;EACrC,eAAe;EACf,qBAAqB;EACrB,YAAY;AACd;AACA,sBAAsB;AACtB;EACE,4CAA4C;EAC5C,aAAa;EACb,4BAA4B;EAC5B,aAAa;EACb,+BAA+B;EAC/B,WAAW;EACX,WAAW;EACX,sBAAsB;AACxB;AACA;EACE,2BAA2B;EAC3B,eAAe;EACf,aAAa;EACb,mBAAmB;EACnB,gBAAgB;AAClB;AACA;EACE,WAAW;EACX,eAAe;EACf,WAAW;EACX,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,iBAAiB;EACjB,mBAAmB;EACnB,4BAA4B;EAC5B,eAAe;AACjB;AACA;EACE,sBAAsB;AACxB;;AAEA;EACE,oBAAoB;EACpB,4BAA4B;EAC5B,kCAAkC;EAClC,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,mCAAmC;EACnC,iBAAiB;EACjB,4BAA4B;EAC5B,+BAA+B;EAC/B,yCAAyC;AAC3C;AACA;EACE,wBAAwB;EACxB,kBAAkB;AACpB;AACA;EACE,wBAAwB;EACxB,eAAe;AACjB;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,uBAAuB;EACvB,yDAAqC;EACrC,wBAAwB;EACxB,qBAAqB;EACrB,4BAA4B;EAC5B,oBAAoB;EACpB,4BAA4B;AAC9B;;AAEA;EACE,iBAAiB;AACnB;;AAEA,wBAAwB;AACxB;EACE,2BAA2B;EAC3B,aAAa;EACb,2CAA2C;EAC3C,SAAS;EACT,aAAa;EACb,gBAAgB;AAClB;AACA;EACE,4BAA4B;EAC5B,aAAa;;EAEb,qBAAqB;;EAErB,eAAe;AACjB;AACA;EACE,gCAAgC;EAChC,mBAAmB;EACnB,kBAAkB;EAClB,0CAA0C;AAC5C;AACA;EACE,kDAAkD;AACpD;AACA;EACE,aAAa;EACb,SAAS;EACT,mBAAmB;EACnB,WAAW;EACX,2BAA2B;EAC3B,mBAAmB;EACnB,eAAe;EACf,gBAAgB;EAChB,kDAAkD;EAClD,+CAA+C;EAC/C,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,UAAU;AACZ;AACA;EACE,2BAA2B;EAC3B,YAAY;EACZ,oBAAoB;EACpB,WAAW;EACX,4CAA4C;EAC5C,aAAa;EACb,qBAAqB;EACrB;sDACoD;EACpD,2BAA2B;AAC7B;;AAEA;EACE,2CAA2C;AAC7C;AACA,kCAAkC;AAClC;EACE,aAAa;EACb,2BAA2B;EAC3B,gBAAgB;EAChB,6BAA6B;EAC7B,kBAAkB;EAClB,SAAS;EACT,uBAAuB;AACzB;;AAEA,iDAAiD;AACjD;EACE,aAAa;EACb,SAAS;EACT,4BAA4B;EAC5B,eAAe;EACf,kBAAkB;EAClB,iBAAiB;EACjB,sBAAsB;EACtB,gBAAgB;EAChB,6BAA6B;AAC/B;AACA;EACE,kBAAkB;AACpB;;AAEA,wDAAwD;AACxD;EACE,4CAA4C;EAC5C,mCAAmC;EACnC,wBAAwB;EACxB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,mBAAmB;EACnB,YAAY;EACZ,eAAe;EACf,YAAY;EACZ,sBAAsB;EACtB,2BAA2B;AAC7B;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAuC;AACzC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,yDAAuC;AACzC;AACA;EACE,yDAAsC;AACxC;AACA;EACE,0DAAwC;AAC1C;AACA;EACE,0DAAuC;AACzC;AACA;EACE,0DAAwC;AAC1C;AACA;EACE,4BAA4B;EAC5B,aAAa;EACb,gBAAgB;EAChB,qBAAqB;EACrB,sBAAsB;EACtB,iBAAiB;EACjB,qBAAqB;EACrB,aAAa;EACb,WAAW;EACX,uBAAuB;EACvB,sBAAsB;AACxB;;AAEA;EACE,2BAA2B;EAC3B,mCAAmC;AACrC;AACA;EACE,mCAAmC;AACrC;AACA;EACE,mCAAmC;AACrC;AACA,+CAA+C;AAC/C;EACE,aAAa;EACb,8BAA8B;EAC9B,SAAS;AACX;AACA;EACE,mBAAmB;EACnB,mDAAmD;EACnD,oBAAoB;AACtB;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,oDAAoD;;EAEpD,oBAAoB;EACpB,gBAAgB;EAChB,eAAe;EACf,iCAAiC;AACnC;AACA;EACE,YAAY;EACZ,yCAAyC;EACzC,YAAY;EACZ,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,sBAAsB;EACtB,qBAAqB;EACrB,kBAAkB;AACpB;;AAEA,uBAAuB;AACvB;EACE,aAAa;EACb,SAAS;EACT,mBAAmB;EACnB,+BAA+B;EAC/B,4CAA4C;EAC5C,2BAA2B;EAC3B,eAAe;AACjB;AACA;EACE,4BAA4B;EAC5B,eAAe;EACf,aAAa;EACb,0BAA0B;EAC1B,WAAW;AACb;AACA;EACE,4BAA4B;EAC5B,WAAW;EACX,eAAe;EACf,YAAY;EACZ,gBAAgB;AAClB;AACA;EACE,2BAA2B;EAC3B,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,YAAY;EACZ,eAAe;AACjB;AACA;EACE,YAAY;EACZ,eAAe;AACjB;AACA;EACE,mCAAmC;EACnC,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,2BAA2B;EAC3B,eAAe;EACf,YAAY;EACZ,sBAAsB;EACtB,0CAA0C;EAC1C,uCAAuC;AACzC;AACA;EACE,YAAY;EACZ,aAAa;EACb,2BAA2B;EAC3B,qBAAqB;AACvB;AACA;EACE,eAAe;EACf,mCAAmC;EACnC,YAAY;EACZ,mBAAmB;EACnB,kBAAkB;EAClB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,mCAAmC;EACnC,2BAA2B;AAC7B;AACA;EACE,mCAAmC;AACrC;AACA;EACE;IACE,0DAAsC;IACtC,sBAAsB;IACtB,2BAA2B;EAC7B;EACA;IACE,0DAAuC;IACvC,sBAAsB;IACtB,2BAA2B;EAC7B;EACA;IACE,0DAAsC;IACtC,sBAAsB;IACtB,2BAA2B;EAC7B;AACF;;AAEA;EACE;IACE,0DAAuC;IACvC,sBAAsB;IACtB,2BAA2B;EAC7B;EACA;IACE,0DAAuC;IACvC,sBAAsB;IACtB,2BAA2B;EAC7B;EACA;IACE,0DAAuC;IACvC,sBAAsB;IACtB,2BAA2B;EAC7B;AACF;AACA;EACE;IACE,4BAA4B;EAC9B;EACA;IACE,6BAA6B;EAC/B;EACA;IACE,8BAA8B;EAChC;EACA;IACE,+BAA+B;EACjC;EACA;IACE,6BAA6B;EAC/B;AACF;AACA;EACE;IACE,0CAA0C;EAC5C;EACA;IACE,2CAA2C;EAC7C;AACF;AACA;EACE;IACE,2CAA2C;EAC7C;EACA;IACE,0CAA0C;EAC5C;AACF;AACA;EACE;IACE,2CAA2C;EAC7C;EACA;IACE,2CAA2C;EAC7C;AACF;AACA;EACE;IACE,2CAA2C;EAC7C;EACA;IACE,2CAA2C;EAC7C;AACF;AACA;EACE;IACE,uBAAuB;EACzB;AACF","sourcesContent":["/* @import url(\"https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap\"); */\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  height: 100vh;\r\n  background-color: var(--darkwhite);\r\n  background-attachment: fixed;\r\n}\r\n\r\n:root {\r\n  --darkwhite: rgba(235, 231, 231, 0.923);\r\n}\r\n/* PRELOADED DIV */\r\n.pree {\r\n  height: 100vh;\r\n  width: 100vw;\r\n  position: absolute;\r\n\r\n  background-color: rgb(104, 103, 103);\r\n  z-index: 999;\r\n  display: grid;\r\n  place-content: center;\r\n  top: 0;\r\n  font-family: helvetica;\r\n  box-sizing: border-box;\r\n  overflow: hidden;\r\n  grid-template-areas:\r\n    \"aa bb cc dd\"\r\n    \" ee ee ee ee \";\r\n}\r\n.pree b {\r\n  color: rgb(29, 27, 27);\r\n  white-space: nowrap;\r\n  letter-spacing: 2px;\r\n  animation: predisplay 1s steps(4, end) infinite alternate;\r\n  grid-area: ee;\r\n  margin-left: -60px;\r\n  font-size: 26px;\r\n}\r\n.pre_circ1 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(223, 61, 61, 0.767);\r\n  margin-bottom: 30px;\r\n  grid-area: aa;\r\n  margin-left: 10px;\r\n  animation: firstt 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ2 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(60, 173, 111, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -40px;\r\n  grid-area: bb;\r\n  animation: secondd 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ3 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(66, 120, 165, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -50px;\r\n  grid-area: cc;\r\n  animation: thirdd 1s steps(4, end) infinite alternate;\r\n}\r\n.pre_circ4 {\r\n  width: 30px;\r\n  height: 30px;\r\n  border-radius: 50%;\r\n  background-color: rgba(168, 88, 155, 0.733);\r\n  margin-bottom: 30px;\r\n  margin-left: -60px;\r\n  grid-area: dd;\r\n  animation: fourth 1s steps(4, end) infinite alternate;\r\n}\r\n\r\n/* DESKTOP CSS CODES */\r\n.main_cont_desktop {\r\n  display: grid;\r\n  grid-template-columns: 25vw 50vw 25vw;\r\n  column-gap: 5px;\r\n  height: var(--height);\r\n  width: 100vw;\r\n}\r\n/* DESKTOP LEFT SIDE */\r\n.left_side_desktop {\r\n  background-color: rgba(255, 255, 255, 0.892);\r\n  height: 100vh;\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n  grid-template-rows: 12% 65% 22%;\r\n  row-gap: 1%;\r\n  width: 100%;\r\n  /* padding: 5px 0px; */\r\n}\r\n.hotel_name_desktop {\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n  display: grid;\r\n  align-items: center;\r\n  padding: 0px 2px;\r\n}\r\n.hotel_name_desktop img {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  height: 70%;\r\n  max-height: 100%;\r\n}\r\n.menu_bar_desktop {\r\n  display: grid;\r\n  padding-left: 1vw;\r\n  align-items: center;\r\n  /* border: var(--border3); */\r\n  max-width: 25vw;\r\n}\r\n.menu_bar_desktop a:nth-child(4) {\r\n  letter-spacing: normal;\r\n}\r\n\r\n.menu_bar_desktop a {\r\n  color: rgb(12, 9, 9);\r\n  /* border: var(--border2); */\r\n  background-color: var(--darkwhite);\r\n  white-space: nowrap;\r\n  padding: 10px;\r\n  letter-spacing: 3px;\r\n  font-size: clamp(15px, 1.5vw, 26px);\r\n  max-width: 23.5vw;\r\n  border-top-left-radius: 50px;\r\n  border-bottom-left-radius: 50px;\r\n  border-right: 2px solid rgb(26, 155, 235);\r\n}\r\n.menu_bar_desktop a:nth-child(2) {\r\n  color: rgb(25, 140, 211);\r\n  border-right: none;\r\n}\r\n.menu_bar_desktop a:hover {\r\n  color: rgb(25, 140, 211);\r\n  cursor: pointer;\r\n}\r\n.discount {\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: center;\r\n  font-family: sans-serif;\r\n  background-image: url(./img/img2.jpg);\r\n  background-position: top;\r\n  background-size: 150%;\r\n  background-repeat: no-repeat;\r\n  filter: opacity(0.8);\r\n  /* border: var(--border2); */\r\n}\r\n\r\n.discount b {\r\n  padding-left: 8px;\r\n}\r\n\r\n/* DESKTOP MIDDLE SIDE */\r\n.mid_side_desktop {\r\n  /* border: var(--border); */\r\n  display: grid;\r\n  grid-template-rows: 0.5fr 0.3fr 2.1fr 1.2fr;\r\n  gap: 15px;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n}\r\n.header_desktop {\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n\r\n  place-content: center;\r\n\r\n  max-width: 50vw;\r\n}\r\n.header_desktop h2 {\r\n  font-family: \"aladin\", Helvetica;\r\n  letter-spacing: 5px;\r\n  font-style: italic;\r\n  text-shadow: 1px 2px 2px rgb(25, 140, 211);\r\n}\r\n.header_desktop h2:hover {\r\n  text-shadow: 2px 1px 1px rgba(25, 140, 211, 0.589);\r\n}\r\n.hotel_type_cont_desktop {\r\n  display: flex;\r\n  gap: 30px;\r\n  align-items: center;\r\n  height: 70%;\r\n  justify-content: flex-start;\r\n  letter-spacing: 3px;\r\n  max-width: 50vw;\r\n  overflow-x: auto;\r\n  border-bottom: 2px solid rgba(39, 141, 204, 0.673);\r\n  border-top: 2px solid rgba(39, 141, 204, 0.673);\r\n  padding: 0px 5px;\r\n}\r\n::-webkit-scrollbar {\r\n  height: 100%;\r\n  width: 0px;\r\n}\r\n.hotel_type_cont_desktop a {\r\n  /* border: var(--border); */\r\n  padding: 5px;\r\n  color: rgb(12, 9, 9);\r\n  height: 80%;\r\n  background-color: rgba(194, 217, 231, 0.673);\r\n  display: grid;\r\n  place-content: center;\r\n  box-shadow: 2px 2px 0px 2px rgba(183, 204, 217, 0.603) inset,\r\n    -2px -2px 0px 2px rgba(183, 204, 217, 0.603) inset;\r\n  /* border: var(--border); */\r\n}\r\n\r\n.hotel_type_cont_desktop a:hover {\r\n  background-color: rgba(39, 141, 204, 0.673);\r\n}\r\n/* FOR THE ROOMS IN DESKTOP VIEW */\r\n.main_rooms_cont_desktop {\r\n  display: flex;\r\n  /* border: var(--border); */\r\n  overflow-x: auto;\r\n  scroll-snap-type: x mandatory;\r\n  padding-left: 10px;\r\n  gap: 10px;\r\n  scroll-behavior: smooth;\r\n}\r\n\r\n/* THE DIV CONTAING THE CONTAINER FOR THE ROOMS */\r\n.rooms_type_cont_desktop {\r\n  display: flex;\r\n  gap: 19px;\r\n  /* border: var(--border2); */\r\n  min-width: 100%;\r\n  overflow-x: scroll;\r\n  flex-wrap: nowrap;\r\n  scroll-snap-align: end;\r\n  overflow-x: auto;\r\n  scroll-snap-type: x mandatory;\r\n}\r\n.rooms_type_cont_desktop:nth-child(1) {\r\n  padding-left: 20px;\r\n}\r\n\r\n/* THE DIV CONTAINER FOR ROOM IMAGES AND DESCRIPTIONS  */\r\n.rooms_desktop {\r\n  border: 3px solid rgba(183, 208, 224, 0.719);\r\n  min-width: clamp(320px, 80%, 450px);\r\n  scroll-snap-align: start;\r\n  background-color: white;\r\n  border-radius: 15px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.img_desktop {\r\n  border-radius: 10px;\r\n  margin: 15px;\r\n  margin-top: 8px;\r\n  height: 100%;\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n.img_royal_1 {\r\n  background-image: url(./img/room1.jpg);\r\n}\r\n.img_royal_2 {\r\n  background-image: url(./img/room2.jpg);\r\n}\r\n.img_exiquite_1 {\r\n  background-image: url(./img/room3.jpg);\r\n}\r\n.img_exiquite_2 {\r\n  background-image: url(./img/room4.jpg);\r\n}\r\n.img_standard_1 {\r\n  background-image: url(./img/room5.jpg);\r\n}\r\n.img_standard_2 {\r\n  background-image: url(./img/room6.jpeg);\r\n}\r\n.img_standard_3 {\r\n  background-image: url(./img/room7.png);\r\n}\r\n.img_standard_4 {\r\n  background-image: url(./img/room8.jpeg);\r\n}\r\n.img_regular_1 {\r\n  background-image: url(./img/room9.png);\r\n}\r\n.img_regular_2 {\r\n  background-image: url(./img/room10.jpeg);\r\n}\r\n.img_regular_3 {\r\n  background-image: url(./img/room11.png);\r\n}\r\n.img_regular_4 {\r\n  background-image: url(./img/room12.jpeg);\r\n}\r\n.decr_desktop {\r\n  /* border: var(--border2); */\r\n  display: grid;\r\n  overflow: hidden;\r\n  font-family: var(--h);\r\n  box-sizing: border-box;\r\n  padding: 2px 10px;\r\n  place-content: center;\r\n  row-gap: 20px;\r\n  height: 60%;\r\n  min-height: fit-content;\r\n  color: rgb(37, 37, 37);\r\n}\r\n\r\n.decr_desktop b {\r\n  /* border: var(--border); */\r\n  font-size: clamp(18px, 2.4vw, 23px);\r\n}\r\n.decr_desktop h2 {\r\n  font-size: clamp(20px, 2.7vw, 25px);\r\n}\r\n.decr_desktop h2 span {\r\n  font-size: clamp(12px, 1.5vw, 15px);\r\n}\r\n/* FOOD AND DRINKS FROM RESTAURANT SLIDE SHOW */\r\n.restaurant_desktop {\r\n  display: grid;\r\n  grid-template-columns: 2fr 2fr;\r\n  gap: 10px;\r\n}\r\n.dish_img {\r\n  border-radius: 30px;\r\n  animation: food 25s ease infinite alternate-reverse;\r\n  filter: opacity(0.7);\r\n}\r\n.drink_img {\r\n  border-radius: 30px;\r\n  display: grid;\r\n  animation: drink 15s ease infinite alternate-reverse;\r\n\r\n  filter: opacity(0.7);\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  color: rgba(252, 198, 137, 0.977);\r\n}\r\n.shadow {\r\n  height: 100%;\r\n  background-color: rgba(26, 25, 25, 0.196);\r\n  z-index: 300;\r\n  font-size: 25px;\r\n  display: grid;\r\n  color: rgb(27, 24, 24);\r\n  font-family: helvetica;\r\n  place-content: center;\r\n  padding-left: 20px;\r\n}\r\n\r\n/* DESKTOP RIGHT SIDE */\r\n.right_side_desktop {\r\n  display: grid;\r\n  gap: 15px;\r\n  /* padding: 10px; */\r\n  grid-template-rows: 50% 32% 15%;\r\n  background-color: rgba(253, 252, 252, 0.973);\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n}\r\n.right_img_cont {\r\n  /* border: var(--border2); */\r\n  max-width: 25vw;\r\n  display: grid;\r\n  grid-template-rows: 92% 7%;\r\n  row-gap: 1%;\r\n}\r\n.right_img_cont > img {\r\n  /* border: var(--border3); */\r\n  width: 25vw;\r\n  max-width: 25vw;\r\n  height: 100%;\r\n  max-height: 100%;\r\n}\r\n.right_img_cont .direct {\r\n  /* border: var(--border); */\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  column-gap: 8px;\r\n}\r\n.right_img_cont img.left {\r\n  height: 30px;\r\n  animation: none;\r\n}\r\n.right_img_cont img.right {\r\n  height: 20px;\r\n  animation: none;\r\n}\r\n.right_descr {\r\n  font-size: clamp(20px, 2.9vw, 25px);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  /* border: var(--border); */\r\n  max-width: 25vw;\r\n  padding: 5px;\r\n  font-family: helvetica;\r\n  border-bottom: 8px solid rgb(11, 100, 178);\r\n  border-top: 8px solid rgb(11, 100, 178);\r\n}\r\n.right_price {\r\n  padding: 8px;\r\n  display: grid;\r\n  /* border: var(--border); */\r\n  place-content: center;\r\n}\r\n.right_price button {\r\n  max-width: 25vw;\r\n  background-color: rgb(11, 100, 178);\r\n  border: none;\r\n  border-radius: 20px;\r\n  padding: 15px 20px;\r\n  color: white;\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n}\r\n.right_price button:hover {\r\n  background-color: rgba(50, 104, 151, 0.74);\r\n}\r\n.right_descr h2 {\r\n  font-size: clamp(22px, 3.1vw, 27px);\r\n  /* border: var(--border); */\r\n}\r\n.right_descr h2 span {\r\n  font-size: clamp(14px, 1.6vw, 17px);\r\n}\r\n@keyframes food {\r\n  0% {\r\n    background-image: url(./img/dish1.jpg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  50% {\r\n    background-image: url(./img/dish2.jpeg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  100% {\r\n    background-image: url(./img/dish3.jpg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n}\r\n\r\n@keyframes drink {\r\n  0% {\r\n    background-image: url(./img/drink1.jpg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  50% {\r\n    background-image: url(./img/drink2.jpg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n  100% {\r\n    background-image: url(./img/drink3.jpg);\r\n    background-size: cover;\r\n    background-position: center;\r\n  }\r\n}\r\n@keyframes predisplay {\r\n  0% {\r\n    color: rgba(10, 4, 4, 0.829);\r\n  }\r\n  25% {\r\n    color: rgba(43, 30, 30, 0.63);\r\n  }\r\n  50% {\r\n    color: rgba(70, 63, 63, 0.555);\r\n  }\r\n  75% {\r\n    color: rgba(105, 92, 92, 0.342);\r\n  }\r\n  100% {\r\n    color: rgba(126, 117, 117, 0);\r\n  }\r\n}\r\n@keyframes firstt {\r\n  from {\r\n    background-color: rgba(223, 61, 61, 0.767);\r\n  }\r\n  to {\r\n    background-color: rgba(168, 88, 155, 0.733);\r\n  }\r\n}\r\n@keyframes secondd {\r\n  from {\r\n    background-color: rgba(60, 173, 111, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(223, 61, 61, 0.767);\r\n  }\r\n}\r\n@keyframes thirdd {\r\n  from {\r\n    background-color: rgba(66, 120, 165, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(60, 173, 111, 0.733);\r\n  }\r\n}\r\n@keyframes fourth {\r\n  from {\r\n    background-color: rgba(168, 88, 155, 0.733);\r\n  }\r\n  to {\r\n    background-color: rgba(66, 120, 165, 0.733);\r\n  }\r\n}\r\n@media (min-width: 1067px) {\r\n  .hotel_type_cont_desktop {\r\n    justify-content: center;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
 
 /***/ }),
 
@@ -36132,6 +36851,61 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/css/desktopbook.css":
+/*!*********************************!*\
+  !*** ./src/css/desktopbook.css ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_desktopbook_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./desktopbook.css */ "./node_modules/css-loader/dist/cjs.js!./src/css/desktopbook.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_desktopbook_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_desktopbook_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_desktopbook_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_desktopbook_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/css/index.css":
 /*!***************************!*\
   !*** ./src/css/index.css ***!
@@ -36565,6 +37339,72 @@ module.exports = __webpack_require__.p + "img/contact.png";
 
 /***/ }),
 
+/***/ "./src/css/img/dish1.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/dish1.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/dish2.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/dish2.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish2.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/dish3.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/dish3.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish3.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink1.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink1.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink2.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink2.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink2.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink3.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink3.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink3.jpg";
+
+/***/ }),
+
 /***/ "./src/css/img/hh.png":
 /*!****************************!*\
   !*** ./src/css/img/hh.png ***!
@@ -36587,6 +37427,17 @@ module.exports = __webpack_require__.p + "img/home.png";
 
 /***/ }),
 
+/***/ "./src/css/img/img2.jpg":
+/*!******************************!*\
+  !*** ./src/css/img/img2.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/img2.jpg";
+
+/***/ }),
+
 /***/ "./src/css/img/leaf2.png":
 /*!*******************************!*\
   !*** ./src/css/img/leaf2.png ***!
@@ -36606,6 +37457,17 @@ module.exports = __webpack_require__.p + "img/leaf2.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "img/leaf3.png";
+
+/***/ }),
+
+/***/ "./src/css/img/left.png":
+/*!******************************!*\
+  !*** ./src/css/img/left.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/left.png";
 
 /***/ }),
 
@@ -36653,6 +37515,17 @@ module.exports = __webpack_require__.p + "img/oklarpng2.png";
 
 /***/ }),
 
+/***/ "./src/css/img/oklarpng3.png":
+/*!***********************************!*\
+  !*** ./src/css/img/oklarpng3.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/oklarpng3.png";
+
+/***/ }),
+
 /***/ "./src/css/img/phone.png":
 /*!*******************************!*\
   !*** ./src/css/img/phone.png ***!
@@ -36686,6 +37559,17 @@ module.exports = __webpack_require__.p + "img/restaurant.png";
 
 /***/ }),
 
+/***/ "./src/css/img/right.png":
+/*!*******************************!*\
+  !*** ./src/css/img/right.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/right.png";
+
+/***/ }),
+
 /***/ "./src/css/img/room.jpg":
 /*!******************************!*\
   !*** ./src/css/img/room.jpg ***!
@@ -36694,6 +37578,138 @@ module.exports = __webpack_require__.p + "img/restaurant.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "img/room.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room1.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room1.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room10.jpeg":
+/*!*********************************!*\
+  !*** ./src/css/img/room10.jpeg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room10.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room11.png":
+/*!********************************!*\
+  !*** ./src/css/img/room11.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room11.png";
+
+/***/ }),
+
+/***/ "./src/css/img/room12.jpeg":
+/*!*********************************!*\
+  !*** ./src/css/img/room12.jpeg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room12.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room2.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room2.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room2.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room3.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room3.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room3.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room4.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room4.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room4.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room5.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room5.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room5.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room6.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/room6.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room6.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room7.png":
+/*!*******************************!*\
+  !*** ./src/css/img/room7.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room7.png";
+
+/***/ }),
+
+/***/ "./src/css/img/room8.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/room8.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room8.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room9.png":
+/*!*******************************!*\
+  !*** ./src/css/img/room9.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room9.png";
 
 /***/ }),
 
@@ -36887,10 +37903,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _mobile_Main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mobile/Main */ "./src/mobile/Main.js");
-/* harmony import */ var _desktop_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./desktop/Main */ "./src/desktop/Main.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Home_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home/home */ "./src/Home/home.js");
+/* harmony import */ var _Bookroom_Book__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Bookroom/Book */ "./src/Bookroom/Book.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./context */ "./src/context.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -36898,12 +37923,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  var isMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)({
-    maxWidth: 540
-  });
-  {
-    return isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mobile_Main__WEBPACK_IMPORTED_MODULE_2__.Mobile, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_desktop_Main__WEBPACK_IMPORTED_MODULE_3__.Desktop, null);
-  }
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+      HOME: true,
+      ROOMS: false,
+      POPULAR: false,
+      LOUNGE: false
+    }]),
+    _useState2 = _slicedToArray(_useState, 2),
+    showUser = _useState2[0],
+    setShowUser = _useState2[1];
+  // THIS SETS THE HOME COMPONENT FROM ERROR PAGE
+  var handleError = function handleError() {
+    setShowUser([{
+      HOME: true,
+      ROOMS: false,
+      POPULAR: false,
+      LOUNGE: false
+    }]);
+  };
+  var errorStyle = {
+    color: "rgba(39, 141, 204, 0.673)",
+    backgroundColor: "transparent",
+    padding: "6px",
+    border: "3px solid powderblue",
+    top: "70px",
+    position: "absolute",
+    cursor: "pointer"
+  };
+  //FUNCTION TO SET THE SCREEN TYPE
+  var setDisplay = function setDisplay(screenType) {
+    setShowUser(function (prev) {
+      return prev.map(function () {
+        return _defineProperty({
+          HOME: false,
+          ROOMS: false,
+          POPULAR: false,
+          LOUNGE: false
+        }, screenType, true);
+      });
+    });
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_context__WEBPACK_IMPORTED_MODULE_4__.Setcurrent.Provider, {
+    value: setDisplay
+  }, showUser[0].HOME ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Home_home__WEBPACK_IMPORTED_MODULE_2__.Home, null) : showUser[0].ROOMS ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Bookroom_Book__WEBPACK_IMPORTED_MODULE_3__.RoomBook, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: {
+      margin: "20px",
+      fontFamily: "helvetica",
+      fontWeight: "600",
+      fontSize: "clamp(15px,1.3vw,24px)"
+    }
+  }, "THIS PAGE IS NOT AVAILABLE YET", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    style: errorStyle,
+    onClick: handleError
+  }, "GO TO HOME PAGE \u2192")));
 };
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.querySelector(".app"));
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null));

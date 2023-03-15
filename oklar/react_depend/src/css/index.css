@@ -25,6 +25,7 @@ body {
   height: var(--height);
   max-height: var(--height);
   overflow: hidden;
+  background-color: white;
 }
 /* Side Menu Style */
 .sidemenu_cont {
@@ -135,6 +136,7 @@ body {
   /* position: fixed; */
   /* top: 0px; */
   /* padding-top: 10px; */
+  background-color: white;
   max-height: var(--height);
   box-sizing: border-box;
   z-index: 100;
@@ -249,11 +251,11 @@ body {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  transform: rotate(180deg);
+  transform: rotate(18home_0deg);
   filter: invert(80%);
 }
 /* The discount styles*/
-.discount {
+.home_discount {
   /* border: var(--border); */
   display: flex;
   background-color: white;
@@ -261,7 +263,7 @@ body {
   padding: 20px 2vw;
   position: relative;
 }
-.discount_text {
+.home_discount_text {
   /* border: var(--border2); */
   width: 35%;
   display: flex;
@@ -269,13 +271,13 @@ body {
   row-gap: 2vw;
   height: fit-content;
 }
-.discount_text h5 {
+.home_discount_text h5 {
   /* border: var(--border); */
   text-align: start;
   color: rgb(250, 184, 61);
   height: fit-content;
 }
-.discount_text h2 {
+.home_discount_text h2 {
   /* border: var(--border); */
   text-align: start;
   font-family: var(--h);
@@ -284,13 +286,13 @@ body {
   height: fit-content;
   letter-spacing: -1px;
 }
-.discount_text h6 {
+.home_discount_text h6 {
   /* border: var(--border); */
   font-size: 19px;
   font-weight: 400;
   height: fit-content;
 }
-.discount_text button {
+.home_discount_text button {
   background-color: transparent;
   border: 2px solid rgb(177, 105, 105);
   width: fit-content;
@@ -302,7 +304,7 @@ body {
   text-align: center;
   font-family: helvetica;
 }
-.discount_img {
+.home_discount_img {
   /* border: var(--border3); */
   width: 65%;
   background-image: url(./img/room.jpg);
@@ -533,6 +535,7 @@ footer {
   padding: 10px 10px;
   background-color: rgb(48, 38, 38);
   justify-content: space-between;
+  height: 100%;
 }
 .img_text {
   display: flex;
@@ -603,6 +606,7 @@ footer {
   scroll-behavior: smooth;
   max-width: 100vw;
   row-gap: 10px;
+  background-color: white;
 }
 
 .desk_intro_cont {
@@ -738,6 +742,7 @@ footer {
   font-family: var(--h);
 }
 .desk_intro section .b a {
+  cursor: pointer;
   text-decoration: none;
   color: white;
   font-size: clamp(13px, 1.6vw, 16px);
@@ -1237,12 +1242,12 @@ footer {
   }
 }
 @media (max-height: 750px) {
-  .discount_text h5 {
+  .home_discount_text h5 {
     text-align: start;
     color: rgb(250, 184, 61);
     height: fit-content;
   }
-  .discount_text h2 {
+  .home_discount_text h2 {
     height: fit-content;
     text-align: start;
     font-family: sans-serif;
@@ -1250,10 +1255,10 @@ footer {
     height: fit-content;
     letter-spacing: -1px;
   }
-  .discount_text h6 {
+  .home_discount_text h6 {
     font-size: 15px;
   }
-  .discount_text button {
+  .home_discount_text button {
     padding: 1px 1px;
     display: grid;
     height: 30px;
@@ -1302,7 +1307,7 @@ footer {
   .toggler {
     height: 14%;
   }
-  .discount_text button {
+  .home_discount_text button {
     padding: 3px 1px;
     display: grid;
     height: 40px;
@@ -1313,7 +1318,7 @@ footer {
   }
 }
 @media (max-width: 281px) {
-  .discount_text button {
+  .home_discount_text button {
     padding: 1px 1px;
     display: grid;
     font-size: 10px;
@@ -1348,7 +1353,7 @@ footer {
     width: 80px;
     padding: 2px;
   }
-  .discount_text h6 {
+  .home_discount_text h6 {
     font-size: 16px;
   }
   .intro_cont {
@@ -1387,7 +1392,7 @@ footer {
   .toggler {
     height: 16%;
   }
-  .discount_text h6 {
+  .home_discount_text h6 {
     font-size: 16px;
   }
   .intro_cont {
@@ -1406,7 +1411,7 @@ footer {
   }
 }
 @media (width: 414px) and (height: 736px) {
-  .discount_text h6 {
+  .home_discount_text h6 {
     font-size: 20px;
   }
   .toggler {
@@ -1442,7 +1447,7 @@ footer {
     font-family: helvetica;
     font-size: 16px;
   }
-  .discount_text h6 {
+  .home_discount_text h6 {
     font-size: 16px;
     font-weight: 600;
   }
@@ -1467,9 +1472,6 @@ footer {
   }
   .service h2 {
     font-size: 18px;
-  }
-  .s_list div h6 {
-    /* font-size: 19px; */
   }
   .img_text h1 {
     font-size: 14px;
@@ -1750,7 +1752,7 @@ footer {
     background-color: transparent;
     backdrop-filter: blur(10px);
   }
-  ::-webkit-scrollbar-thumb {
+  /* ::-webkit-scrollbar-thumb {
     background-color: var(--b);
-  }
+  } */
 }
