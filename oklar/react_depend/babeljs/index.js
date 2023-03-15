@@ -76,8 +76,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/left.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/right.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _css_img_left_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/left.png */ "./src/css/img/left.png");
+/* harmony import */ var _css_img_right_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/right.png */ "./src/css/img/right.png");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -176,11 +176,11 @@ var Rightview = function Rightview(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "left",
     onClick: decrNo,
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/left.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_left_png__WEBPACK_IMPORTED_MODULE_1__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "right",
     onClick: incrNo,
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/right.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_right_png__WEBPACK_IMPORTED_MODULE_2__
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "right_descr"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, getDescription()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "\u20A6", getPrice(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "/night"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -368,7 +368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng3.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/oklarpng3.png */ "./src/css/img/oklarpng3.png");
 /* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
 
 
@@ -386,7 +386,7 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "hotel_name_desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng3.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "menu_bar_desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -666,12 +666,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/Home/desktop/component/Navbar.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_5__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng2.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/room.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
+/* harmony import */ var _css_img_oklarpng2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/img/oklarpng2.png */ "./src/css/img/oklarpng2.png");
+/* harmony import */ var _css_img_room_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../css/img/room.jpg */ "./src/css/img/room.jpg");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
 
 
 
@@ -682,7 +682,7 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 
 
 var Intro = function Intro() {
-  var changeCurrent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_4__.Setcurrent);
+  var changeCurrent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_6__.Setcurrent);
   var toRoom = function toRoom() {
     changeCurrent("ROOMS");
   };
@@ -691,13 +691,13 @@ var Intro = function Intro() {
     var textContent = event.target.textContent;
     changeCurrent(textContent);
   };
-  var isLarge = (0,react_responsive__WEBPACK_IMPORTED_MODULE_5__.useMediaQuery)({
+  var isLarge = (0,react_responsive__WEBPACK_IMPORTED_MODULE_7__.useMediaQuery)({
     minWidth: 1180
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desk_intro_cont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__.Nav, {
-    brand: isLarge ? Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) : Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng2.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    brand: isLarge ? _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_3__ : _css_img_oklarpng2_png__WEBPACK_IMPORTED_MODULE_4__,
     list: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       onClick: changeScreen
     }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -712,7 +712,7 @@ var Intro = function Intro() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desk_intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/room.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_room_jpg__WEBPACK_IMPORTED_MODULE_5__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "STAY WITH COMFORT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "i r"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "NIGERIAN."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "ROYALTY."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "COMFORT.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -783,7 +783,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/beach1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _css_img_beach1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/beach1.jpg */ "./src/css/img/beach1.jpg");
 
 
 
@@ -793,7 +793,7 @@ var Service = function Service(prop) {
     ref: prop.service_ref,
     className: "desk_service"
   }, prop.isanimated.service && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/beach1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    src: _css_img_beach1_jpg__WEBPACK_IMPORTED_MODULE_1__,
     "data-name": "beach"
   }),
   // prettier-ignore
@@ -964,14 +964,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/home.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/book.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/restaurant.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/popular.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/contact.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/cancel.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
+/* harmony import */ var _css_img_home_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/home.png */ "./src/css/img/home.png");
+/* harmony import */ var _css_img_book_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/img/book.png */ "./src/css/img/book.png");
+/* harmony import */ var _css_img_restaurant_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/img/restaurant.png */ "./src/css/img/restaurant.png");
+/* harmony import */ var _css_img_popular_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../css/img/popular.png */ "./src/css/img/popular.png");
+/* harmony import */ var _css_img_contact_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../css/img/contact.png */ "./src/css/img/contact.png");
+/* harmony import */ var _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../css/img/oklarpng.png */ "./src/css/img/oklarpng.png");
+/* harmony import */ var _css_img_cancel_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../css/img/cancel.png */ "./src/css/img/cancel.png");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
 
 
 
@@ -984,7 +984,7 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 
 
 var SideMenu = function SideMenu(prop) {
-  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_3__.Setcurrent);
+  var showUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context__WEBPACK_IMPORTED_MODULE_9__.Setcurrent);
   var setDisplay = function setDisplay(event) {
     var childNodes = event.target.childNodes;
     var no = childNodes.length - 1;
@@ -996,32 +996,32 @@ var SideMenu = function SideMenu(prop) {
     className: prop.menu ? "menu_cont openup" : "menu_cont closeup"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "brand",
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/oklarpng.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_oklarpng_png__WEBPACK_IMPORTED_MODULE_7__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     id: prop.menu ? "text-show" : "text-hide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/home.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_home_png__WEBPACK_IMPORTED_MODULE_2__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "HOME")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/book.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_book_png__WEBPACK_IMPORTED_MODULE_3__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "ROOMS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/restaurant.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_restaurant_png__WEBPACK_IMPORTED_MODULE_4__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "POPULAR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/popular.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_popular_png__WEBPACK_IMPORTED_MODULE_5__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "LOUNGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     onClick: setDisplay
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/contact.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_contact_png__WEBPACK_IMPORTED_MODULE_6__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, "CONTACT")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     onClick: prop.handlemenu,
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/cancel.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    src: _css_img_cancel_png__WEBPACK_IMPORTED_MODULE_8__,
     className: prop.menu ? "close" : "hide"
   }));
 };
@@ -1089,7 +1089,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/bouque.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _css_img_bouque_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/img/bouque.png */ "./src/css/img/bouque.png");
 /* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
 
 
@@ -1104,7 +1104,7 @@ var Foot = function Foot(prop) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_img_text" : "img_text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../../css/img/bouque.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    src: _css_img_bouque_png__WEBPACK_IMPORTED_MODULE_2__
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "CALL FOR BOOKING")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: prop.d ? "desk_contact" : "contact"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1346,25 +1346,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/img2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room4.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room5.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room6.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room7.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room8.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room9.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room10.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room11.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room12.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_13___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/dish1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/dish2.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/dish3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/drink1.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/drink2.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/drink3.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./img/img2.jpg */ "./src/css/img/img2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room1.jpg */ "./src/css/img/room1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room2.jpg */ "./src/css/img/room2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room3.jpg */ "./src/css/img/room3.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room4.jpg */ "./src/css/img/room4.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room5.jpg */ "./src/css/img/room5.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room6.jpeg */ "./src/css/img/room6.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room7.png */ "./src/css/img/room7.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room8.jpeg */ "./src/css/img/room8.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room9.png */ "./src/css/img/room9.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room10.jpeg */ "./src/css/img/room10.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room11.png */ "./src/css/img/room11.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room12.jpeg */ "./src/css/img/room12.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish1.jpg */ "./src/css/img/dish1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish2.jpeg */ "./src/css/img/dish2.jpeg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(/*! ./img/dish3.jpg */ "./src/css/img/dish3.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink1.jpg */ "./src/css/img/drink1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink2.jpg */ "./src/css/img/drink2.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(/*! ./img/drink3.jpg */ "./src/css/img/drink3.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -1414,19 +1414,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/sun1.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/smile.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/oklarpng.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/menu.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/room.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/leaf2.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/phone.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/hh.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/leaf3.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/tag.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/map.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ Object(function webpackMissingModule() { var e = new Error("Cannot find module './img/popular.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./img/sun1.png */ "./src/css/img/sun1.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./img/smile.png */ "./src/css/img/smile.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./img/oklarpng.png */ "./src/css/img/oklarpng.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png */ "./src/css/img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./img/menu.png */ "./src/css/img/menu.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ./img/room.jpg */ "./src/css/img/room.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ./img/leaf2.png */ "./src/css/img/leaf2.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ./img/phone.png */ "./src/css/img/phone.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(/*! ./img/hh.png */ "./src/css/img/hh.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(/*! ./img/leaf3.png */ "./src/css/img/leaf3.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(/*! ./img/tag.png */ "./src/css/img/tag.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(/*! ./img/map.png */ "./src/css/img/map.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(/*! ./img/popular.png */ "./src/css/img/popular.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -37271,6 +37271,479 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/css/img/beach1.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/beach1.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/beach1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/book.png":
+/*!******************************!*\
+  !*** ./src/css/img/book.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/book.png";
+
+/***/ }),
+
+/***/ "./src/css/img/bouque.png":
+/*!********************************!*\
+  !*** ./src/css/img/bouque.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/bouque.png";
+
+/***/ }),
+
+/***/ "./src/css/img/cancel.png":
+/*!********************************!*\
+  !*** ./src/css/img/cancel.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/cancel.png";
+
+/***/ }),
+
+/***/ "./src/css/img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png":
+/*!*******************************************************************************************************************!*\
+  !*** ./src/css/img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png ***!
+  \*******************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/coffee-cappuccino-espresso-tea-cafe-vector-cup-of-coffee-b38acae73aef556a0beeca6cd22e0dd0.png";
+
+/***/ }),
+
+/***/ "./src/css/img/contact.png":
+/*!*********************************!*\
+  !*** ./src/css/img/contact.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/contact.png";
+
+/***/ }),
+
+/***/ "./src/css/img/dish1.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/dish1.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/dish2.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/dish2.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish2.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/dish3.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/dish3.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/dish3.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink1.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink1.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink2.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink2.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink2.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/drink3.jpg":
+/*!********************************!*\
+  !*** ./src/css/img/drink3.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/drink3.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/hh.png":
+/*!****************************!*\
+  !*** ./src/css/img/hh.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/hh.png";
+
+/***/ }),
+
+/***/ "./src/css/img/home.png":
+/*!******************************!*\
+  !*** ./src/css/img/home.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/home.png";
+
+/***/ }),
+
+/***/ "./src/css/img/img2.jpg":
+/*!******************************!*\
+  !*** ./src/css/img/img2.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/img2.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/leaf2.png":
+/*!*******************************!*\
+  !*** ./src/css/img/leaf2.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/leaf2.png";
+
+/***/ }),
+
+/***/ "./src/css/img/leaf3.png":
+/*!*******************************!*\
+  !*** ./src/css/img/leaf3.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/leaf3.png";
+
+/***/ }),
+
+/***/ "./src/css/img/left.png":
+/*!******************************!*\
+  !*** ./src/css/img/left.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/left.png";
+
+/***/ }),
+
+/***/ "./src/css/img/map.png":
+/*!*****************************!*\
+  !*** ./src/css/img/map.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/map.png";
+
+/***/ }),
+
+/***/ "./src/css/img/menu.png":
+/*!******************************!*\
+  !*** ./src/css/img/menu.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/menu.png";
+
+/***/ }),
+
+/***/ "./src/css/img/oklarpng.png":
+/*!**********************************!*\
+  !*** ./src/css/img/oklarpng.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/oklarpng.png";
+
+/***/ }),
+
+/***/ "./src/css/img/oklarpng2.png":
+/*!***********************************!*\
+  !*** ./src/css/img/oklarpng2.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/oklarpng2.png";
+
+/***/ }),
+
+/***/ "./src/css/img/oklarpng3.png":
+/*!***********************************!*\
+  !*** ./src/css/img/oklarpng3.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/oklarpng3.png";
+
+/***/ }),
+
+/***/ "./src/css/img/phone.png":
+/*!*******************************!*\
+  !*** ./src/css/img/phone.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/phone.png";
+
+/***/ }),
+
+/***/ "./src/css/img/popular.png":
+/*!*********************************!*\
+  !*** ./src/css/img/popular.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/popular.png";
+
+/***/ }),
+
+/***/ "./src/css/img/restaurant.png":
+/*!************************************!*\
+  !*** ./src/css/img/restaurant.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/restaurant.png";
+
+/***/ }),
+
+/***/ "./src/css/img/right.png":
+/*!*******************************!*\
+  !*** ./src/css/img/right.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/right.png";
+
+/***/ }),
+
+/***/ "./src/css/img/room.jpg":
+/*!******************************!*\
+  !*** ./src/css/img/room.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room1.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room1.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room1.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room10.jpeg":
+/*!*********************************!*\
+  !*** ./src/css/img/room10.jpeg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room10.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room11.png":
+/*!********************************!*\
+  !*** ./src/css/img/room11.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room11.png";
+
+/***/ }),
+
+/***/ "./src/css/img/room12.jpeg":
+/*!*********************************!*\
+  !*** ./src/css/img/room12.jpeg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room12.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room2.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room2.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room2.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room3.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room3.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room3.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room4.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room4.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room4.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room5.jpg":
+/*!*******************************!*\
+  !*** ./src/css/img/room5.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room5.jpg";
+
+/***/ }),
+
+/***/ "./src/css/img/room6.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/room6.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room6.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room7.png":
+/*!*******************************!*\
+  !*** ./src/css/img/room7.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room7.png";
+
+/***/ }),
+
+/***/ "./src/css/img/room8.jpeg":
+/*!********************************!*\
+  !*** ./src/css/img/room8.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room8.jpeg";
+
+/***/ }),
+
+/***/ "./src/css/img/room9.png":
+/*!*******************************!*\
+  !*** ./src/css/img/room9.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/room9.png";
+
+/***/ }),
+
+/***/ "./src/css/img/smile.png":
+/*!*******************************!*\
+  !*** ./src/css/img/smile.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/smile.png";
+
+/***/ }),
+
+/***/ "./src/css/img/sun1.png":
+/*!******************************!*\
+  !*** ./src/css/img/sun1.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/sun1.png";
+
+/***/ }),
+
+/***/ "./src/css/img/tag.png":
+/*!*****************************!*\
+  !*** ./src/css/img/tag.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/tag.png";
+
 /***/ })
 
 /******/ 	});
@@ -37330,6 +37803,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -37353,6 +37838,26 @@ module.exports = styleTagTransform;
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
