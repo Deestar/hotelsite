@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "/babeljs"),
     //THIS DESCRIBE THE PATH YOU WANT YOU IMAGES TO GO TO
-    assetModuleFilename: "img/[name].[ext]",
+    assetModuleFilename: "img/[name][ext]",
     //saves the name of the js file with the entry name above
     filename: `[name].js`,
   },

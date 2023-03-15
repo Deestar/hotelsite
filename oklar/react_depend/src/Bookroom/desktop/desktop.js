@@ -11,22 +11,32 @@ export const Desktop = () => {
     {
       name: "ROYAL",
       set: true,
-      images: ["./img/room1.jpg"],
+      images: ["./img/room1.jpg", "./img/room2.jpg"],
     },
     {
       name: "EXIQUITE",
       set: false,
-      images: ["./img/room2.jpg"],
+      images: ["./img/room3.jpg", "./img/room4.jpg"],
     },
     {
       name: "STANDARD",
       set: false,
-      images: ["./img/room3.jpg"],
+      images: [
+        "./img/room5.jpg",
+        "./img/room6.jpeg",
+        "./img/room7.png",
+        "./img/room8.jpeg",
+      ],
     },
     {
       name: "REGULAR",
       set: false,
-      images: ["./img/room4.jpg"],
+      images: [
+        "./img/room9.png",
+        "./img/room10.jpeg",
+        "./img/room11.png",
+        "./img/room12.jpeg",
+      ],
     },
   ]);
   // Fuction to set the "set" value to of type state to true

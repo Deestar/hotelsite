@@ -261,14 +261,49 @@ body {
   flex-direction: column;
 }
 .img_desktop {
-  /* border: var(--border2); */
   border-radius: 10px;
   margin: 15px;
   margin-top: 8px;
   height: 100%;
-  background-image: url(./img/img6.jpg);
+
   background-size: cover;
   background-position: center;
+}
+.img_royal_1 {
+  background-image: url(./img/room1.jpg);
+}
+.img_royal_2 {
+  background-image: url(./img/room2.jpg);
+}
+.img_exiquite_1 {
+  background-image: url(./img/room3.jpg);
+}
+.img_exiquite_2 {
+  background-image: url(./img/room4.jpg);
+}
+.img_standard_1 {
+  background-image: url(./img/room5.jpg);
+}
+.img_standard_2 {
+  background-image: url(./img/room6.jpeg);
+}
+.img_standard_3 {
+  background-image: url(./img/room7.png);
+}
+.img_standard_4 {
+  background-image: url(./img/room8.jpeg);
+}
+.img_regular_1 {
+  background-image: url(./img/room9.png);
+}
+.img_regular_2 {
+  background-image: url(./img/room10.jpeg);
+}
+.img_regular_3 {
+  background-image: url(./img/room11.png);
+}
+.img_regular_4 {
+  background-image: url(./img/room12.jpeg);
 }
 .decr_desktop {
   /* border: var(--border2); */

@@ -15,6 +15,10 @@ export const Rightview = ({ imgArray }) => {
       if (imgno > 1) {
         setImgNo(0);
       }
+    } else {
+      if (imgno > 3) {
+        setImgNo(0);
+      }
     }
   }, [imgArray, imgno]);
   //Function to increase the index num of img
@@ -23,6 +27,37 @@ export const Rightview = ({ imgArray }) => {
   };
   const decrNo = () => {
     setImgNo((prev) => prev - 1);
+  };
+  const getPrice = () => {
+    let price;
+    let descript;
+    if (currentTypeName === "EXIQUITE") {
+      price = "10,000";
+      descript = "A description for EXIQUITE ROOMS";
+    } else if (currentTypeName === "STANDARD") {
+      price = "8,000";
+      descript = "A description for STANDARD ROOMS";
+    } else if (currentTypeName === "REGULAR") {
+      price = "7,000";
+      descript = "A description for REGULAR ROOMS";
+    } else {
+      price = "12,000";
+      descript = "A description for ROYAL ROOMS";
+    }
+    return price;
+  };
+  const getDescription = () => {
+    let descript;
+    if (currentTypeName === "EXIQUITE") {
+      descript = "A description for EXIQUITE ROOMS";
+    } else if (currentTypeName === "STANDARD") {
+      descript = "A description for STANDARD ROOMS";
+    } else if (currentTypeName === "REGULAR") {
+      descript = "A description for REGULAR ROOMS";
+    } else {
+      descript = "A description for ROYAL ROOMS";
+    }
+    return descript;
   };
   return (
     <div className="right_side_desktop">
@@ -35,12 +70,10 @@ export const Rightview = ({ imgArray }) => {
       </div>
 
       <div className="right_descr">
-        <b>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod.
-        </b>
+        <b>{getDescription()}</b>
         <h2>
-          &#8358;12,000<span>/night</span>
+          &#8358;{getPrice()}
+          <span>/night</span>
         </h2>
       </div>
       <div className="right_price">
