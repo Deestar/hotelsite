@@ -1,5 +1,5 @@
 import React from "react";
-import Brand from "../../../css/img/oklarpng3.png";
+import Brand from "../../../css/img/oklarpng4.png";
 import { useContext } from "react";
 import { Setcurrent } from "../../../context";
 export default () => {

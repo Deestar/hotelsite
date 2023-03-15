@@ -368,7 +368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/oklarpng3.png */ "./src/css/img/oklarpng3.png");
+/* harmony import */ var _css_img_oklarpng4_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/img/oklarpng4.png */ "./src/css/img/oklarpng4.png");
 /* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../context */ "./src/context.js");
 
 
@@ -386,7 +386,7 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "hotel_name_desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: _css_img_oklarpng3_png__WEBPACK_IMPORTED_MODULE_1__
+    src: _css_img_oklarpng4_png__WEBPACK_IMPORTED_MODULE_1__
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "menu_bar_desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -37515,14 +37515,14 @@ module.exports = __webpack_require__.p + "img/oklarpng2.png";
 
 /***/ }),
 
-/***/ "./src/css/img/oklarpng3.png":
+/***/ "./src/css/img/oklarpng4.png":
 /*!***********************************!*\
-  !*** ./src/css/img/oklarpng3.png ***!
+  !*** ./src/css/img/oklarpng4.png ***!
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "img/oklarpng3.png";
+module.exports = __webpack_require__.p + "img/oklarpng4.png";
 
 /***/ }),
 
