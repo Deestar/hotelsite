@@ -4,11 +4,11 @@ export const Discount = (prop) => {
   return (
     <div
       ref={prop.d ? prop.specials_ref : null}
-      className={prop.d ? "desk_discount" : "discount"}
+      className={prop.d ? "desk_discount" : "home_discount"}
       data-name="specials"
     >
       {(prop.isanimated ? prop.isanimated.specials : true) && (
-        <div className={prop.d ? "desk_discount_text" : "discount_text"}>
+        <div className={prop.d ? "desk_discount_text" : "home_discount_text"}>
           <h5>SPECIALS</h5>
           {prop.d ? (
             <h2>
@@ -40,7 +40,7 @@ export const Discount = (prop) => {
           }
         </div>
       )}
-      <div className={prop.d ? "desk_discount_img" : "discount_img"}></div>
+      <div className={prop.d ? "desk_discount_img" : "home_discount_img"}></div>
     </div>
   );
 };

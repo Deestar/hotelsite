@@ -14,10 +14,14 @@ export const Rightview = ({ imgArray }) => {
     if (currentType.name === "ROYAL" || currentType.name === "EXIQUITE") {
       if (imgno > 1) {
         setImgNo(0);
+      } else if (imgno < 0) {
+        setImgNo(1);
       }
     } else {
       if (imgno > 3) {
         setImgNo(0);
+      } else if (imgno < 0) {
+        setImgNo(3);
       }
     }
   }, [imgArray, imgno]);

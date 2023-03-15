@@ -5,7 +5,14 @@ import { useMediaQuery } from "react-responsive";
 import Brand1 from "../../../css/img/oklarpng.png";
 import Brand2 from "../../../css/img/oklarpng2.png";
 import Room from "../../../css/img/room.jpg";
+import { useContext } from "react";
+import { Setcurrent } from "../../../context";
 export const Intro = () => {
+  const changeCurrent = useContext(Setcurrent);
+  const changeScreen = (event) => {
+    const { textContent } = event.target;
+    changeCurrent(textContent);
+  };
   const isLarge = useMediaQuery({ minWidth: 1180 });
   return (
     <div className="desk_intro_cont">
@@ -13,11 +20,11 @@ export const Intro = () => {
         brand={isLarge ? Brand1 : Brand2}
         list={
           <>
-            <li>HOME</li>
-            <li>ROOMS</li>
-            <li>POPULAR</li>
-            <li>LOUNGE</li>
-            <li>CONTACT</li>
+            <li onClick={changeScreen}>HOME</li>
+            <li onClick={changeScreen}>ROOMS</li>
+            <li onClick={changeScreen}>POPULAR</li>
+            <li onClick={changeScreen}>CONTACT</li>
+            <li onClick={changeScreen}>LOUNGE</li>
           </>
         }
       />
