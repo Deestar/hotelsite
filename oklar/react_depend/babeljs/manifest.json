@@ -1,0 +1,26 @@
+{
+  "short_name": "OKLAR HOTEL",
+  "name": "OKLAR ROYAL HOTEL",
+  "description": "DEESTAR HOTEL LANDING PAGE",
+  "icons": [
+    {
+      "src": "./img/oklarpng3.png",
+      "sizes": "448x109",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/oklarpng2.png",
+      "sizes": "1024x250",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/hicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "id": ".?version=1.2",
+  "display": "standalone",
+  "background_color": "rgb(55, 97, 151)"
+}
