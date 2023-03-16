@@ -494,6 +494,33 @@ var Desktop = function Desktop() {
 
 /***/ }),
 
+/***/ "./src/Bookroom/mobile/component/header.js":
+/*!*************************************************!*\
+  !*** ./src/Bookroom/mobile/component/header.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MobileHeader": () => (/* binding */ MobileHeader)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var MobileHeader = function MobileHeader() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "mobilebook_header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "./img/oklarpng4.png",
+    className: "mobilebook_brand"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "mobilebook_toggler"
+  }));
+};
+
+/***/ }),
+
 /***/ "./src/Bookroom/mobile/mobile.js":
 /*!***************************************!*\
   !*** ./src/Bookroom/mobile/mobile.js ***!
@@ -509,15 +536,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _css_mobilebook_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/mobilebook.css */ "./src/css/mobilebook.css");
+/* harmony import */ var _component_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/header */ "./src/Bookroom/mobile/component/header.js");
 
 
 document.body.style.backgroundColor = "white";
 
+
 var Mobile = function Mobile() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "mobilebook_maincont"
-  });
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: {
+      border: "2px solid red"
+    }
+  }));
 };
+{
+  /*   <MobileHeader /> */
+}
 
 /***/ }),
 
@@ -1468,7 +1504,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mobilebook_maincont {\r\n  border: var(--border);\r\n  height: var(--height);\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/mobilebook.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,qBAAqB;EACrB,uBAAuB;AACzB","sourcesContent":[".mobilebook_maincont {\r\n  border: var(--border);\r\n  height: var(--height);\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mobilebook_maincont {\r\n  border: var(--border);\r\n  height: var(--height);\r\n  background-color: white;\r\n  display: grid;\r\n  padding-top: 20px;\r\n  padding-left: 20px;\r\n\r\n  grid-template-rows: 10%;\r\n}\r\n.mobilebook_header {\r\n  border-radius: 20px 20px 0px 0px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding-right: 10px;\r\n  align-items: center;\r\n}\r\n.mobilebook_brand {\r\n  width: 60%;\r\n  max-height: 60px;\r\n}\r\n.mobilebook_toggler {\r\n  border: var(--border2);\r\n  height: clamp(35px, 60%, 45px);\r\n  width: clamp(40px, 13.5%, 45px);\r\n  border-radius: 10px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/mobilebook.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,qBAAqB;EACrB,uBAAuB;EACvB,aAAa;EACb,iBAAiB;EACjB,kBAAkB;;EAElB,uBAAuB;AACzB;AACA;EACE,gCAAgC;EAChC,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,mBAAmB;AACrB;AACA;EACE,UAAU;EACV,gBAAgB;AAClB;AACA;EACE,sBAAsB;EACtB,8BAA8B;EAC9B,+BAA+B;EAC/B,mBAAmB;AACrB","sourcesContent":[".mobilebook_maincont {\r\n  border: var(--border);\r\n  height: var(--height);\r\n  background-color: white;\r\n  display: grid;\r\n  padding-top: 20px;\r\n  padding-left: 20px;\r\n\r\n  grid-template-rows: 10%;\r\n}\r\n.mobilebook_header {\r\n  border-radius: 20px 20px 0px 0px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding-right: 10px;\r\n  align-items: center;\r\n}\r\n.mobilebook_brand {\r\n  width: 60%;\r\n  max-height: 60px;\r\n}\r\n.mobilebook_toggler {\r\n  border: var(--border2);\r\n  height: clamp(35px, 60%, 45px);\r\n  width: clamp(40px, 13.5%, 45px);\r\n  border-radius: 10px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

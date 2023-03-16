@@ -2,4 +2,26 @@
   border: var(--border);
   height: var(--height);
   background-color: white;
+  display: grid;
+  padding-top: 20px;
+  padding-left: 20px;
+
+  grid-template-rows: 10%;
+}
+.mobilebook_header {
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  align-items: center;
+}
+.mobilebook_brand {
+  width: 60%;
+  max-height: 60px;
+}
+.mobilebook_toggler {
+  border: var(--border2);
+  height: clamp(35px, 60%, 45px);
+  width: clamp(40px, 13.5%, 45px);
+  border-radius: 10px;
 }
