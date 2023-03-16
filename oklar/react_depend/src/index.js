@@ -4,12 +4,12 @@ import { createRoot } from "react-dom/client";
 import { Home } from "./Home/home";
 import { RoomBook } from "./Bookroom/Book";
 import { Setcurrent } from "./context";
-
+import Loader from "./Bookroom/desktop/component/loader";
 const App = () => {
   const [showUser, setShowUser] = useState([
     {
-      HOME: true,
-      ROOMS: false,
+      HOME: false,
+      ROOMS: true,
       POPULAR: false,
       LOUNGE: false,
     },
@@ -46,8 +46,14 @@ const App = () => {
       }))
     );
   };
+  // TO SET LOADER
+  const [load, setLoad] = useState(true);
+  window.onload = () => {
+    setLoad(false);
+  };
   return (
     <Setcurrent.Provider value={setDisplay}>
+      {load && <Loader />}
       {showUser[0].HOME ? (
         <Home />
       ) : showUser[0].ROOMS ? (

@@ -1,7 +1,6 @@
 import React from "react";
 import { ReactDOM } from "react-dom/client";
 import "../../css/desktopbook.css";
-import Loader from "./component/loader";
 import Sidemenu from "./component/sidemenu";
 import { RoomSection } from "./component/room";
 import { Rightview } from "./component/rightview";

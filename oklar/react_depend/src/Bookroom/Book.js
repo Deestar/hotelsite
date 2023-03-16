@@ -5,6 +5,6 @@ import { Mobile } from "./mobile/mobile";
 import { Desktop } from "./desktop/desktop";
 
 export const RoomBook = () => {
-  const isMobile = useMediaQuery({ maxWidth: 800 });
+  const isMobile = useMediaQuery({ maxWidth: 765 });
   return isMobile ? <Mobile /> : <Desktop />;
 };

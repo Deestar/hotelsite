@@ -1,0 +1,5 @@
+.mobilebook_maincont {
+  border: var(--border);
+  height: var(--height);
+  background-color: white;
+}
