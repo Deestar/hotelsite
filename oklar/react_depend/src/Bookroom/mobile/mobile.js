@@ -12,6 +12,11 @@ import { SideMenu } from "../../Home/mobile/component/Sidemenu";
 export const Mobile = () => {
   const [showmore, setShowMore] = useState(null);
   const [typestate, setTypeState] = useState("ROYAL");
+  const [menu, setMenu] = useState(false);
+  //Function to remove the sidemenu with state
+  const switchMenu = () => {
+    setMenu((prev) => !prev);
+  };
   //Function to know the clicked body and set it to a state
   const changeBtn = (type) => {
     setTypeState(type);
@@ -36,7 +41,8 @@ export const Mobile = () => {
     />
   ) : (
     <div className="mobilebook_maincont">
-      <MobileHeader />
+      <SideMenu menu={menu} handlemenu={switchMenu} />
+      <MobileHeader showMenu={switchMenu} />
       <MobileType btntype={changeBtn} />
       <MobileRooms getshowmore={roomDescription} typenow={typestate} />
       <Special d={false} />

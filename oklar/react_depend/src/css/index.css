@@ -41,6 +41,7 @@ body {
   column-gap: 20px;
   transition: width 0.5s ease-in;
   z-index: 999;
+  left: 0;
   overflow: hidden;
 }
 .sidemenu_cont .close {
