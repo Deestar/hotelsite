@@ -1,9 +1,3 @@
-## A Hotel Website I Am Working On
+# A Hotel LANDING AND BOOKING SITE
 
-- Responsive Landing page
-
-- A Site To Book Rooms (Desktop Only)
-
-- Currently Working On The Mobile Book Room
-
-# Built with ReactJs
+## Built with ReactJs
