@@ -303,6 +303,7 @@ body {
   font-weight: 800;
   text-align: center;
   font-family: helvetica;
+  color: rgb(24, 24, 24);
 }
 .home_discount_img {
   /* border: var(--border3); */
@@ -379,7 +380,7 @@ body {
   /* border: var(--border); */
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: clamp(9px, 2.3vh, 14px);
   width: 100%;
 }
 .service h2 {
@@ -402,7 +403,7 @@ body {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: clamp(5px, 1.5vh, 8px);
 }
 .s_list div {
   border-bottom: 2px solid rgb(129, 128, 128);
@@ -419,7 +420,7 @@ body {
   height: fit-content;
   align-self: flex-end;
   font-family: var(--h);
-  font-size: clamp(16px, 6.1vw, 24px);
+  font-size: clamp(14px, 5.5vw, 24px);
   letter-spacing: 1px;
 }
 .s_list div h1 {
@@ -469,7 +470,7 @@ body {
 }
 .s_title > div b {
   font-weight: 600;
-  font-size: 24px;
+  font-size: clamp(14px, 4.7vw, 24px);
   font-family: var(--h);
   color: rgb(29, 27, 27);
   /* border: var(--border); */
@@ -1368,7 +1369,7 @@ footer {
     font-size: 12px;
   }
   .s_title div b {
-    font-size: 19px;
+    font-size: 15px;
   }
 }
 @media (width: 375px) and (height: 667px) {

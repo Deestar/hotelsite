@@ -1,12 +1,13 @@
 .mobilebook_maincont {
-  border: var(--border);
+  /* border: var(--border); */
   height: var(--height);
   background-color: white;
   display: grid;
   padding-top: 20px;
   padding-left: 20px;
-
-  grid-template-rows: 10%;
+  grid-template-rows: 10% 20% clamp(330px, 50%, 450px) clamp(530px, 70%, 550px);
+  row-gap: 15px;
+  overflow-y: scroll;
 }
 .mobilebook_header {
   border-radius: 20px 20px 0px 0px;
@@ -20,8 +21,240 @@
   max-height: 60px;
 }
 .mobilebook_toggler {
-  border: var(--border2);
   height: clamp(35px, 60%, 45px);
   width: clamp(40px, 13.5%, 45px);
   border-radius: 10px;
+  background-image: url(./img/menu3.png);
+  filter: invert(40%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mobilebook_typecont {
+  /* border: var(--border); */
+  display: flex;
+  flex-direction: column;
+}
+.mobilebook_title {
+  height: 40%;
+  /* border: var(--border2); */
+  display: flex;
+  align-items: flex-end;
+}
+.mobilebook_title h3 {
+  font-size: clamp(26px, 6.9vw, 30px);
+  font-family: helvetica;
+  /* border: var(--border2); */
+  color: rgb(63, 62, 62);
+}
+.mobilebook_types {
+  /* border: var(--border3); */
+  height: 80%;
+  display: flex;
+  column-gap: 10px;
+  max-width: calc(100vw - 25px);
+  overflow: auto;
+  padding-right: 2px;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.mobilebook_types button {
+  min-width: clamp(88px, 32%, 107px);
+  padding: 0px 4px;
+  height: clamp(40px, 41%, 50px);
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(238, 235, 235);
+  font-family: helvetica;
+  letter-spacing: 1px;
+  font-size: clamp(12px, 4.2vw, 15px);
+  color: rgb(88, 87, 87);
+}
+button.mobilebook_addbtnbck {
+  color: white;
+  background-color: rgb(78, 147, 238);
+}
+.mobilebook_roomcont {
+  /* border: var(--border); */
+  display: flex;
+  column-gap: 10px;
+  overflow-x: auto;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  scroll-snap-type: X mandatory;
+  /* This is to reduce the gap btwn the room container and the select options */
+  margin-top: -15px;
+}
+.mobilebook_typeroom {
+  /* border: var(--border2); */
+  min-width: 100%;
+  display: flex;
+  justify-content: start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  column-gap: 5%;
+  scroll-behavior: smooth;
+  scroll-snap-type: X mandatory;
+}
+.Mobilebox {
+  border-top: 0.5px solid rgba(224, 224, 224, 0.479);
+  border-right: 1px solid rgba(148, 147, 147, 0.479);
+  border-bottom: 1px solid rgba(148, 147, 147, 0.479);
+  box-shadow: 2px 2px 6px 1px rgba(148, 147, 147, 0.479);
+  min-width: clamp(235px, 80%, 300px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+}
+.Mobilebox > img {
+  /* border: var(--border2); */
+  height: 56%;
+  border-radius: 12px;
+}
+.Mobilebox_desrip {
+  /* border: var(--border3); */
+  height: 28%;
+  font-size: clamp(16px, 4.6vw, 20px);
+  font-family: helvetica;
+  font-weight: 600;
+  color: rgb(116, 114, 114);
+}
+.Mobilebox_price {
+  /* border: var(--border); */
+  display: flex;
+  height: fit-content;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 6px;
+}
+.Mobilebox_price h3 {
+  font-size: clamp(21px, 6.2vw, 27px);
+  color: rgb(78, 147, 238);
+}
+.Mobilebox_price h3 span {
+  color: rgb(177, 177, 177);
+  font-size: clamp(12px, 4vw, 15px);
+}
+.Mobilebox_price h4 {
+  color: var(--orange);
+  font-family: helvetica;
+  font-size: clamp(14.5px, 4vw, 16px);
+}
+.BookPage_cont {
+  /* border: var(--border); */
+  height: var(--height);
+  position: relative;
+  display: grid;
+  grid-template-rows: 45% 55%;
+}
+.Bookpage_img_cont {
+  /* border: var(--border2); */
+  display: flex;
+  position: relative;
+  z-index: 50;
+}
+.Bookpage_img_cont > img {
+  /* border: var(--border); */
+  width: 100%;
+  max-width: 100%;
+}
+section.Bookpage_img_cont .Bookpage_return {
+  position: absolute;
+  width: 35px;
+  background-image: url("./img/bookbck.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.555);
+  height: 35px;
+  backdrop-filter: blur(0.5);
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+.Boopage_bookroom_cont {
+  background-color: white;
+  align-self: end;
+  min-height: calc(100% + 15%);
+  max-height: calc(100% + 15%);
+  border-radius: 45px 45px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 5px;
+  z-index: 200;
+  overflow-y: auto;
+  row-gap: 3vh;
+}
+.Boopage_bookroom_cont h3 {
+  height: fit-content;
+  font-size: clamp(26px, 7.3vw, 28px);
+  color: rgb(59, 59, 59);
+  font-family: helvetica;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.Boopage_bookroom_cont h4 {
+  height: fit-content;
+  font-family: helvetica;
+  font-size: clamp(16px, 5.1vw, 19px);
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: rgb(133, 132, 132);
+}
+.Boopage_bookroom_cont a {
+  height: clamp(160px, 30vh, 210px);
+  display: grid;
+  /* border: var(--border); */
+}
+.Boopage_bookroom_cont a img {
+  /* border: var(--border3); */
+  width: 100%;
+  border: 0.5px solid var(--white);
+  max-width: 100%;
+  max-height: clamp(160px, 30vh, 210px);
+  border-radius: 20px;
+}
+.Boopage_bookroom_cont .BookPage_last {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Boopage_bookroom_cont .BookPage_last button:nth-child(1) {
+  width: 42%;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: helvetica;
+  font-size: clamp(15px, 4.7vw, 19px);
+  color: rgb(78, 147, 238);
+  border: none;
+  background-color: rgb(241, 241, 241);
+  font-weight: 600;
+}
+.Boopage_bookroom_cont .BookPage_last button:nth-child(1) span {
+  font-size: clamp(12px, 3.4vw, 15px);
+  color: rgb(133, 132, 132);
+}
+.Boopage_bookroom_cont .BookPage_last button:nth-child(2) {
+  width: 36%;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: helvetica;
+  font-size: clamp(13px, 4.4vw, 17px);
+  color: white;
+  border: none;
+  background-color: rgb(32, 32, 32);
 }

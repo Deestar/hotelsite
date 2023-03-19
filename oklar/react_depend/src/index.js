@@ -48,12 +48,15 @@ const App = () => {
   };
   // TO SET LOADER
   const [load, setLoad] = useState(true);
-  window.onload = () => {
-    setLoad(false);
-  };
+  // window.onload = () => {
+  //   setTimeout(() => {
+  //     setLoad(false);
+  //   }, 1500);
+  // };
+
   return (
     <Setcurrent.Provider value={setDisplay}>
-      {load && <Loader />}
+      {/* {load && <Loader />} */}
       {showUser[0].HOME ? (
         <Home />
       ) : showUser[0].ROOMS ? (
